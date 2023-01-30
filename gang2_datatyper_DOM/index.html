@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gang2</title>
+    <script src="gang2.js"></script>
+</head>
+<body onload="start()">
+
+<h1>Variabler</h1>
+<p>Variabler erklæres først og derefter navngives de</p>
+<p>Variabler kan kun indeholde én værdi</p>
+
+    <script>
+        //Declaring and assigning
+        var enVariable = 10;
+        //Var er forældet//
+
+        let skuffen;
+        skuffen = "papir";
+        skuffen = "blyanter";
+        skuffen = 4.5;
+        //Let kan få reassignet en ny værdi
+
+
+        const reolen = "bøger";
+        // reolen = "blomster";
+        //man kan ikke reassigne nye værdier til en variable deklareret med const
+
+        alert(skuffen + reolen);
+        //outputter værdierne af variablerne skuffen og reolen i en pop up
+        //Der er dog intet mellemrum
+        //For at tilføje mellemrum gør som nedenstående
+
+        alert(skuffen +" "+ reolen);
+        //Vi tilføjer en string der indeholder et mellemrum
+
+    </script>
+
+<h1>DOM</h1>
+<p>DOM er kort for Document Object Model</p>
+<p>DOM er strukturen html-dokumentet</p>
+<p>det har med børn at gøre og hvordan vi i JavaScript får fat på forskellige html elementer såsom IDer eller Class</p>
+
+<p id="id1">Mit første id</p>
+
+<p class="class1">min klasse</p>
+<p class="class1"> min anden klasse</p>
+
+<script>
+    let ptag = document.getElementById("id1");
+    ptag.innerText = "mit andet id"; //Ændre teksten inde i p tagget
+    ptag.innerHTML = "" //innerhtml er det der findes mellem start og slut tagget
+
+    document.getElementById("id1").innerText = "mit tredje id"; //istedet for at smide getid i en variable
+</script>
+
+<h1>Eksempel</h1>
+<input id="txt" type = "text"/>
+<button onclick ="alert(document.getElementById('txt').value);">Alert me</button>
+
+<script>
+    // alert(document.getElementById("txt").value); //input har ikke noget tekst imellem (der er ikke noget slut-tag) derfor bruges value istedet for innerhtml
+    //denne linje er efterfølgende sat ind i buttons onclick event.
+</script>
+
+
+
+</body>
+</html>
