@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e40f3a4-65d9-46a6-bd75-2a72ab4aade3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassenJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassenJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_intro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gang2/gang2_øvelser.html" beforeDir="false" afterPath="$PROJECT_DIR$/gang2/gang2_øvelser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,19 +33,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +56,9 @@
       <updated>1675103072786</updated>
       <workItem from="1675103074506" duration="4872000" />
       <workItem from="1675149461905" duration="1848000" />
+      <workItem from="1675153204011" duration="185000" />
+      <workItem from="1675153469110" duration="75000" />
+      <workItem from="1675153560935" duration="1097000" />
     </task>
     <servers />
   </component>
