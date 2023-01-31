@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e40f3a4-65d9-46a6-bd75-2a72ab4aade3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassenJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassenJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/gang2_datatyper_DOM/gang2klassenJS.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -55,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675103072786</updated>
       <workItem from="1675103074506" duration="4872000" />
-      <workItem from="1675149461905" duration="1432000" />
+      <workItem from="1675149461905" duration="1848000" />
     </task>
     <servers />
   </component>
