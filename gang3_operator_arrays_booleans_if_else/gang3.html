@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Basiske datatyper</h1>
+    <p>en datatype beskriver hvad for en type værdi en variabel har</p>
+    <p>Nedenstående er en liste af forskellige datatyper</p>
+    <ul>
+        <li>number</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <p>En boolean kan være true eller false</p>
+    </ul>
+
+<h5>Boolske operatorer</h5>
+<table border="1">
+    <tr>
+        <td>Operator</td>
+        <td>Udtryk</td>
+        <td>Eksempel</td>
+        <td>True or false?</td>
+    </tr>
+    <tr>
+        <td><</td>
+        <td>Mindre end</td>
+        <td>2 < 5</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><=</td>
+        <td>mindre end eller lig med</td>
+        <td>5 <= 5</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>lig med</td>
+        <td>3 == 3</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>!=</td>
+        <td>ikke lig med</td>
+        <td>3!=3</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>></td>
+        <td>større end</td>
+        <td>2>1</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>>=</td>
+        <td>større end eller lig med</td>
+        <td>2>=3</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>===</td>
+        <td>lig med og samme type</td>
+    </tr>
+</table>
+
+
+<h1>Dynamiske typer</h1>
+    <p>JavaScript kan godt selv finde ud af hvad for en type det er, istedet for at jeg skal skrive det.</p>
+    <p>Hvis vi ikke ved hvad type en variabel er kan man bruge funktionen typeoff </p>
+
+    <script>
+        let variabel = "hejsa";
+        // alert(typeof (variabel));
+        //Retunerer "string"
+
+        let variabel2 = 5;
+        // alert(typeof (variabel2));
+        //retunerer "number"
+    </script>
+
+    <p> det er nok en god ide at definere hvilken datatype en værdi har, så værdien ikke senere ved en fejl bliver ændret
+        til en string</p>
+    <p>Eller hvis der håndteres nogle brugerdata, kan der også opstå problemer med datatyper</p>
+
+
+<h1>Aritmetiske operationer</h1>
+    <p>matematiske operatorer: + - * / %.< p/>
+    <p> % er modulus hvilket giver det der er tilbage</p>
+
+    <script>
+        const x = 12;
+        const y = 4;
+        const z = "hej";
+
+        const result = x + y;
+
+        const result2 = x % y;
+        //Dividerer x med y og retunerer resten
+        // alert(result2);
+
+        const result3 = x + z;
+        //Her omdanner javascript bare number værdien til en string og sætter de to strings sammen.
+    </script>
+
+<h1>Kontrolstruktur</h1>
+    <p>Hvad dele af koden skal udføres og hvad skal ikke udføres?</p>
+    <p> Dette vælges ved at bruge if og else statements</p>
+
+    <script>
+        const a = 20;
+        const b = 20;
+
+        if ( a > b)
+            alert("x er størst");
+        else if( y > x)
+            alert("y er størst");
+        else
+            alert("de er ens");
+        // {} behøves hvis jeg vil køre mere end én linje under if.
+        //else fungerer som fail safe og der kan kun være én else betingelse
+        //BEWARE Else hører til sidste forhenværende if statement, der ikke har en else
+    </script>
+
+<h2>større boolske udtryk</h2>
+    <p>&& - AND - betyder at begge udtryk skal være true</p>
+    <p>|| - OR - mindst én skal være true</p>
+
+    <script>
+        //Eksempel på et større bolsk udtryk
+        const c = 12;
+        const d = 20;
+        const e = 5;
+
+        if (c > d && c > e) //hvis jeg havde brugt || udtrykket istedet for, ville der blive retuneret true
+            alert("True");
+        else (
+            alert("False")
+        )
+        // Begger sider skal være true for at lave en alert. Er c større end d? nej. er c større end e? ja.
+        //Begge sider er ikke true, derfor false
+    </script>
+
+<h2>if-sætninger</h2>
+<p>switch sætning</p>
+<p>bruges hvis du leder efter en bestemt værdi ud af flere</p>
+
+<h1>Arrays</h1>
+<p>index er indgangen til en plads</p>
+<p>et array starter på 0</p>
+<p>f.eks. Index 8 i reference til pladsen hvor der står 8</p>
+
+<button id="knapMedId">Hello master 5</button>
+<script>
+    // const sort = "sort";
+    // const hvid = "hvid";
+    // const pink = "pink";
+    // const gul = "gul";
+
+    let farver = ["gray","white","pink","yellow"] //de kantede paranteser signalerer et array, og nu er variabler inde i også defineret
+    const tekster = ["hejsa", "farvel!", "wuh!!"];
+
+    function farveChange(elementReference, farveString, tekst){
+        elementReference.style.backgroundColor=farveString;
+        elementReference.innerHTML=tekst;
+    }
+
+    const knap = document.getElementById('knapMedId');
+    farveChange(knap, "lime", "jeg er isa");
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    <button onmouseover="farveChange(this, farver[0], tekster[0])" onmouseout="farveChange(this, farver[3], tekster[1])">Hello master </button>
+    <button onmouseover="farveChange(this, farver[1], tekster[0])" onmouseout="">Hello master </button>
+    <button onmouseover="farveChange(this, farver[2], tekster[2])" onmouseout="">Hello master </button>
+    <button onmouseover="farveChange(this, farver[3], tekster[2])" onmouseout="">Hello master </button>
+
+</body>
+</html>
