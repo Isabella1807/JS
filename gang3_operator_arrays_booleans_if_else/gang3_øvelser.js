@@ -12,7 +12,7 @@ if (animals[1]=="gorilla"){
 
 document.getElementById("liste").innerHTML+="liste af dyr"
 for (var i = 0; i < animals.length; i++) {
-    document.getElementById(liste).innerHTML+= "<br>" + animals[i];
+    document.getElementById("liste").innerHTML+= "<br>" + animals[i];
 }
 //i = 0 - lav en variable og giv den værdien 0
 // i < animals.length - hvis i er mindre end længden af arreyet animals
