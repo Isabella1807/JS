@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e40f3a4-65d9-46a6-bd75-2a72ab4aade3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gang3_operator_arrays_booleans_if_else/gang3_øvelser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gang3_operator_arrays_booleans_if_else/gang3.html" beforeDir="false" afterPath="$PROJECT_DIR$/gang3_operator_arrays_booleans_if_else/gang3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gang3_operator_arrays_booleans_if_else/gang3_øvelser.html" beforeDir="false" afterPath="$PROJECT_DIR$/gang3_operator_arrays_booleans_if_else/gang3_øvelser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
@@ -61,11 +64,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1696" y="335" key="run.anything.popup" timestamp="1675201640310">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1696" y="335" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1675201640310" />
   </component>
 </project>
