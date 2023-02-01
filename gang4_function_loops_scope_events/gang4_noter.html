@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="gang4_noter.js" defer></script>
+    <style>
+        .classBlogPost {
+            border: 2px solid green;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        .classBlogPost h1 {
+            text-transform: uppercase;
+        }
+        .blogPostAuthor {
+            color: gray;
+            margin-top: -1.8rem;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+
+<h1>funktioner</h1>
+    <p>for at undgå at gentage kode kan man bruge funktioner</p>
+    <p>tager 0 eller flere parametre</p>
+    <p>retunerer en værdi</p>
+
+<script>
+
+
+
+    function funcNavn(text) { //
+        document.write("<h1>" + text + "<h1/>")
+    }
+
+    funcNavn("hejsa");
+    funcNavn("hej med dig");
+    funcNavn("hvem er du");
+
+
+
+    function addtwo(num1, num2) {
+        let result = num1 + num2;
+        return result;
+    }
+
+    const y = 5;
+    const x = 10;
+
+    let result = addtwo(x,y);
+
+
+
+
+    function writeheader(mitParameter){
+        const abc = mitParameter + 1000;
+        const myTxt = abc + "kr.";
+        document.write("<h1>My new number is " + myTxt + "</h1>");
+    }
+
+    // writeheader(); //Her kaldes min function
+    // writeheader();
+
+    for (let tæller = 1; tæller < 10; tæller += 4) { //Hvis jeg bare vil lægge én til, er det nemmer for mig med tæller++ end tæller+=
+        writeheader(tæller);
+    }
+
+
+
+
+    const eeeee = 876;
+
+
+
+
+    function writeBlogPost(title, text, author, number1, number2) {
+        const mysum = addtwo(number1, number2);
+
+        const htmlTitle = "<h1>"+title+" "+mysum+"</h1>";
+        const htmlText = "<p>"+text + eeeee+"</p>";
+        const htmlAuthor = "<p class='blogPostAuthor'>" + author + "</p>";
+
+        const blogBody = "<div class='classBlogPost'>" + htmlTitle + htmlAuthor + htmlText + "</div>";
+        document.write(blogBody);
+    }
+
+    writeBlogPost("Mælk er dyrt!", "Forskere har fundet ud af at det er dyrt at nyde livet!", "forskere fra landet", 4, 7);
+    writeBlogPost("Julemanden findes!", "HOLD DA OP DET VIDSTE JEG IKKE", "barn fra hjørnet", 0, 5);
+    writeBlogPost("Hejsa", "Isa siger hej! Sig hej tilbage, og vind chancen for at vinde en hotdog", "bilka", -6, 2);
+
+</script>
+
+</body>
+</html>
