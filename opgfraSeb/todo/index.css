@@ -1,0 +1,7 @@
+#addNewTaskContainer{
+    border: 2px solid blue;
+}
+
+#listOfTasks{
+    border: 2px solid red;
+}
