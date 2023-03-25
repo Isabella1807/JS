@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>JavaScript Notes</h1>
+    <h2>Data Types</h2>
+    <ul>
+        <li>Number <br>
+            Any number, including numbers with decimals: 4, 8, 1516, 23.42.
+        </li>
+        <li>String <br>
+            Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by
+            single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to think
+            of string as a fancy word for text.
+            <ul>
+                <p>
+                    let a = 'Hello' + ' ' + 'world';<br>
+                    console.log(a);<br>
+                    logs "Hello world" in the console
+                </p>
+            </ul>
+        </li>
+        <li>Boolean <br>
+            This data type only has two possible values— either true or false (without quotes). It’s helpful to
+            think of booleans as on and off switches or as the answers to a “yes” or “no” question.
+        </li>
+        <li>Null <br>
+            This data type represents the intentional absence of a value, and is represented by the keyword null
+            (without quotes).
+        </li>
+        <li>Undefined <br>
+            This data type is denoted by the keyword undefined (without quotes). It also represents the
+            absence of a value though it has a different use than null. undefined means that a given value does not
+            exist.
+        </li>
+        <li>Symbol <br>
+            A newer feature to the language, symbols are unique identifiers, useful in more complex coding. No
+            need to worry about these for now.
+        </li>
+        <li>Object <br>
+            Collections of related data.
+        </li>
+    </ul>
+
+    <h2>Operators</h2>
+    <h3>Aritmetic operators</h3>
+    <table border = "1">
+        <tr>
+            <th>Operator</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Addition</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td>Exponentiation</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Division</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Modulus (Remainder)</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td>Increment</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>Decrement</td>
+        </tr>
+    </table>
+
+    <h3>Assignment Operators</h3>
+    <table border = "1">
+        <tr>
+            <th>Operator</th>
+            <th>Example</th>
+            <th>Same As</th>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>x = y</td>
+            <td>x = y</td>
+        </tr>
+        <tr>
+            <td>+=</td>
+            <td>x += y</td>
+            <td>x = x + y</td>
+        </tr>
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+        </tr>
+        <tr>
+            <td>*=</td>
+            <td>x *= y</td>
+            <td>x = x * y</td>
+        </tr>
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+        </tr>
+        <tr>
+            <td>%=</td>
+            <td>x %= y</td>
+            <td>x = x % y</td>
+        </tr>
+        <tr>
+            <td>**=</td>
+            <td>x **= y</td>
+            <td>x = x ** y</td>
+        </tr>
+    </table>
+
+    <h3>Comparison operators</h3>
+    <table border = "1">
+        <tr>
+            <th>Operator</th>
+            <th>Udtryk</th>
+            <th>Eksempel</th>
+            <th>True or false?</th>
+        </tr>
+        <tr>
+            <td><</td>
+            <td>Mindre end</td>
+            <td>2 < 5</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td><=</td>
+            <td>mindre end eller lig med</td>
+            <td>5 <= 5</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>lig med</td>
+            <td>3 == 3</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>ikke lig med</td>
+            <td>3!=3</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>></td>
+            <td>større end</td>
+            <td>2>1</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>>=</td>
+            <td>større end eller lig med</td>
+            <td>2>=3</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>lig med og samme type</td>
+            <td>'4'===4</td>
+            <td>false</td>
+        </tr>
+    </table>
+    <h2>Properties</h2>
+    <h3>String properties</h3>
+    <ul>
+        <li>.length <br>
+            every string instance has a property called length that stores the number of characters in that string. You
+            can retrieve property information by appending the string with a period and the property name:
+            <ul>
+                <p>
+                    console.log('my string'.length); <br>
+                    Will log the amount of characters in the above strong, which is 9 here.
+                </p>
+            </ul>
+        </li>
+    </ul>
+    <h2>Methods</h2>
+    <p>
+        All types contains some properties and some of those properties are also methods which can perform an action.
+    </p>
+    <h3>Strings methods</h3>
+    <ul>
+        <li>.toUpperCase()</li>
+        <ul>
+            <p>
+                The whole string is logged in uppercase letters
+            </p>
+        </ul>
+        <li>.toLowerCase()</li>
+        <ul>
+            <p>
+                The whole string is logged in lowercase letters
+            </p>
+        </ul>
+        <li>.trim()</li>
+        <ul>
+            <p>
+                Will remove whitespace inside the string
+            </p>
+        </ul>
+        <li>.startsWith('H')</li>
+        <ul>
+            <p>This will return a boolean, does the string start with the letter h? yes or no</p>
+        </ul>
+    </ul>
+    <h2>Built-in Objects</h2>
+    <p>Built-in Objects are collections of methods and properties that JavaScript </p>
+    <ul>
+        <li>Math<br>
+            Math contains a few methods such as:
+            <ul>
+                <li>.random()</li>
+                <li>.floor()</li>
+                <li>.ceil()</li>
+            </ul>
+            <p>
+                console.log(Math.random() * 50); <br>
+                will log a random number, most likely with decimals from 0 to 50
+            </p>
+            <p>
+                console.log(Math.floor(Math.random() * 50)); <br>
+                will log a random number without decimals from 0 to 50
+            </p>
+            <p>
+                console.log(Math.floor(Math.random() * 10) + 90); <br>
+                will log a random number without decimals in a range of 10, from 90 and up.
+            </p>
+            <p>
+                console.log(Math.ceil(43.8)); <br>
+                will log a the closest integer to the number in parenthesis.
+            </p>
+        </li>
+        <li>Number</li>
+        Obejct number contains a few methods such as:
+        <ul>
+            <li>.isInteger()</li>
+        </ul>
+    </ul>
+    <h2>Variables</h2>
+    <p>a variable is a container for a value. Below are the keywords to used to create variables:</p>
+    <ul>
+        <li>var</li>
+        <li>let</li>
+        <p>variables assigned using let can have their value be reassigned a different value.</p>
+        <p>let fruit = 'apple'; <br>
+            console.log(fruit); logs apple <br>
+            fruit = 'pear'; <br>
+            console.log(fruit); logs pear
+        <li>const</li>
+        <p> A const variable cannot be reassigned because it is constant.</p>
+        <p>If reassigned a new value, you will get a TypeError.</p>
+    </ul>
+</main>
+</body>
+
+</html>
