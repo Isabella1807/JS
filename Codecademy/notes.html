@@ -22,7 +22,7 @@
             single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to think
             of string as a fancy word for text.
             <ul>
-                <p>
+                <p> Example of a String concatenation.
                     let a = 'Hello' + ' ' + 'world';<br>
                     console.log(a);<br>
                     logs "Hello world" in the console
@@ -53,7 +53,7 @@
 
     <h2>Operators</h2>
     <h3>Aritmetic operators</h3>
-    <table border = "1">
+    <table border="1">
         <tr>
             <th>Operator</th>
             <th>Description</th>
@@ -93,7 +93,7 @@
     </table>
 
     <h3>Assignment Operators</h3>
-    <table border = "1">
+    <table border="1">
         <tr>
             <th>Operator</th>
             <th>Example</th>
@@ -137,7 +137,7 @@
     </table>
 
     <h3>Comparison operators</h3>
-    <table border = "1">
+    <table border="1">
         <tr>
             <th>Operator</th>
             <th>Udtryk</th>
@@ -191,10 +191,10 @@
     <h3>Increment and Decrement operator</h3>
     <ul>
         <li>Increment operator <br>
-        a++
+            a++
         </li>
         <li>Decrement operator <br>
-        a--
+            a--
         </li>
     </ul>
 
@@ -308,6 +308,91 @@
     <p>let myName = "Isa"; <br>
         let myCity = "Aalborg"; <br>
         console.log(`My name is ${myName}. My favorite city is ${myCity}`);</p>
+
+    <h3>String Concatenation</h3>
+    <p>A way to connect string values, even when those values are stored in variables, using +</p>
+    <p>
+        let YourName = "Henry"; <br>
+        console.log("Hej med dig" + " " + YourName + ".";) <br>
+        output in log: "Hej med dig Henry." <br>
+    </p>
+
+    <h2>Conditional statements</h2>
+    <ul>
+        <li>if</li>
+        <li>else</li>
+        <li>else if <br>
+            Else if allows for more than two outcomes. You can add as many else if statements as you want. The else if statement comes after the if statement and before the else statement.</li>
+    </ul>
+    <h3>The Switch keyword</h3>
+    <p>Else if statements can become quite long and overwhelming, which is when we can use the switch keyword</p>
+    <p>before:</p>
+    <p>
+        let athleteFinalPosition = 'first place'; <br>
+        <br>
+        if (athleteFinalPosition === 'first place') { <br>
+            console.log('You get the gold medal!'); <br>
+        } else if (athleteFinalPosition === 'second place') { <br>
+            console.log('You get the silver medal!'); <br>
+        } else if (athleteFinalPosition === 'third place') { <br>
+            console.log ('You get the bronze medal!'); <br>
+        } else { <br>
+        console.log('No medal awarded.'); <br>
+        }
+    </p>
+    <p>After:</p>
+    <p>
+        let athleteFinalPosition = 'first place'; <br>
+        <br>
+        switch (athleteFinalPosition) { <br>
+        case 'first place': <br>
+        console.log('You get the gold medal!'); <br>
+        break; <br>
+        case 'second place': <br>
+        console.log('You get the silver medal!'); <br>
+        break; <br>
+        case 'third place': <br>
+        console.log('You get the bronze medal!'); <br>
+        break; <br>
+        default: <br>
+        console.log('No medal awarded.'); <br>
+        break; <br>
+        }
+    </p>
+    <p>Break keywod will stop the remaining cases from being checked.</p>
+
+
+    <h2>Truthy or Falsy?</h2>
+    <h3>Falsy values</h3>
+    <p>These values will be evaluated as false when checked.</p>
+    <ul>
+        <li>0</li>
+        <li>Empty strings like "" or ''</li>
+        <li>Null</li>
+        <li>Undefined</li>
+        <li>Nan or Not a Number</li>
+    </ul>
+
+    <h2>Ternary operator</h2>
+    <p>A way to simplify the syntax of an if else statement</p>
+    <p>Before:</p>
+    <p>
+        let isNightTime = true; <br>
+        <br>
+        if (isNightTime) { <br>
+        console.log('Turn on the lights!'); <br>
+        } else { <br>
+        console.log('Turn off the lights!'); <br>
+        } <br>
+    </p>
+    <p>After:</p>
+    <p>
+        let isNightTime = true; <br>
+        <br>
+        isNightTime ? console.log('Turn on the lights!') <br>
+        : console.log('Turn off the lights!'); <br>
+    </p>
+
 </main>
 </body>
 
