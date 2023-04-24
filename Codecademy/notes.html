@@ -393,6 +393,56 @@
         : console.log('Turn off the lights!'); <br>
     </p>
 
+    <H2>Functions</H2>
+    <p>A function is a reusable piece of code that can accept input and performs a specific task</p>
+    <ul>
+        <li></li>
+    </ul>
+    <script>
+        function plantNeedsWater1 (day){                         //First iteration of a function declartion
+            if (day === 'Wednesday'){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        const plantNeedsWater2 = function (day){                 //Second iteration of a function declartion using function expression
+            return day === 'Wednesday';
+        }
+
+        const plantNeedsWater3 = (day) => {                      //Third iteration of a function declartion, and best one
+            return day === 'Wednesday';
+        }
+
+        const plantNeedsWater4 = (day) => {                      //Fourth iteration, using ternary, den klager hvis der bare står true og false
+            return day === 'Wednesday' ? "true" : "false";
+        };
+
+        const plantNeedsWater5 = (day) => day === 'Wednesday';   //Fifth iteration of a function declartion
+
+
+        plantNeedsWater5('Wednesday');
+        console.log(plantNeedsWater5('Wednesday'));
+    </script>
+
+    <h3>Parameters</h3>
+    <p>The purpose of parameters is to allow a function to accept data.</p>
+    <p>Arguments are the values passed into a function. Parameters act as placeholders for argument values.</p>
+
+    <h3>Default values</h3>
+    <script>
+        const eatFruit = (fruit = 'apple') => {                 //fruit gets a default value of the string apple
+            console.log(`This ${fruit} is delicious!`);
+        };
+
+        eatFruit();
+    </script>
+
+    <h3>Consice body</h3>
+    <p>Concise body syntax (with one parameter) does not use parentheses, curly braces, or the return keyword.</p>
+
+
 </main>
 </body>
 
