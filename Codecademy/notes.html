@@ -442,7 +442,17 @@
     <h3>Consice body</h3>
     <p>Concise body syntax (with one parameter) does not use parentheses, curly braces, or the return keyword.</p>
 
-
+    <h3>Scope</h3>
+    <p>refers to where variables can be accessed throughout the program, and is determined by where and how they are declared.</p>
+    <ul>
+        <li>Global variables <br>
+            Global variables are declared outside of blocks{} but can be used inside of functions, and is stored in the global namespace.<br>
+            The Global namespace can reach a point where there is too many variables, which is called Scope Pollution. Scope pollution makes it difficult to keep track of variables, and variables might collide with locally scoped.
+        </li>
+        <li>Local variables <br>
+            Local variables are defined inside blocks of code {} and we refer to those as being or having block scope. cannot be used outside of a function.
+        </li>
+    </ul>
 </main>
 </body>
 
