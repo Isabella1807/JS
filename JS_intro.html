@@ -14,13 +14,20 @@
         ////////////////////////////////////////////////////////////////////////////////////////////////
 
         <h1>versionsstyring herunder git og github</h1>
+            <p>man kan styre version af projeket og man kan arbejde sammen</p>
+            <p>hvad er forskellen på git og github? git er softwaren altså selve koden, github er en platform/websted, hvor vi har vores kode liggende</p>
+            <p>Udfordringer: Hvis man arbejder i samme fil opstår der hurtigt konflikter eller hvis man bare committer og pusher uden at pull eller resolve.</p>
         <h1>Hvad er Javascript og hvad kan det bruges til</h1>
+            <p>objekt og event baseret scripting sprog (scripting sprog omsætter først til kode senere?, objekt og event baseret. Event baseret - vi venter på at der sker noget. Objekt baseret - vi indkapsler koden i objekter</p>
             <p>gør hjemmesider dynamiske</p>
             <p>manipulere med DOM'en</p>
-            <p>client-side programmering, kan også bruges til server-side </p>
+            <p>client-side programmering(hjemmesiden kører hos brugeren), kan også bruges til server-side.  </p>
             <p>kan bruges til formvalidering, flytte og manipulere html objekter og andet</p>
+            <p>Placeringer: 1. Inline -  direkte på linje. 2. Ekstern - eget JS dokument. 3. Internt - I HTML med script tag</p>
+            <p>Fordele ved at placere eksternt: 1. Nemmere at kunne overskue alting, 2. Genbrugelighed. 3. Vi undgår renderblocking, optimere visning af css</p>
         <h1>DOM</h1>
             <p>Strukturen på tilhørende html dokument</p>
+            <p>Objekt model af html'en</p>
             <p>Læser html dokumentet og opbygger så Objekt modellen baseret på dokumentet </p>
         <h1>placering og udførelse af JS</h1>
             <p>i script som kan være både inline og ekstern</p>
@@ -29,32 +36,41 @@
         <p>Hvad er problemet med at have én fil til ALT JS koden? ikke hav JS kode til en html side, som ikke bruges. </p>
         <h1>fejlfinding, hvordan ved jeg om JS virker</h1>
             <p>Tjek om filen findes og om den er linket rigtigt</p>
+            <p>Tjek konsol panelet</p>
             <p>console.log</p>
             <p>og alert</p>
         <h1>variabler og typer</h1>
             <p>variabler er skuffer der indeholder værdier og bruges til at gøre ting nemmere og hurtigere fordi ting kan puttes i kasser</p>
-            <p>Variabler bruges til at gøre det lettere for os selv og gøre koden kortere</p>
-            <p>variabler kan være forskellige typer: strings, booleans, number, object, null, undefined, array</p>
+            <p>Variabler bruges til at gøre det lettere for os selv og gøre koden kortere. Det gør også koden hurtigere, fordi vi genrbuger dataen fra variablen.</p>
+            <p>variabler kan være forskellige typer: primitive: strings, booleans, number, null, undefined. Ikke primitive: object, array</p>
             <p></p>
         <h1>operatorer</h1>
             <p>nogle symboler der opererer på noget</p>
             <p>tildelings, sammenlignings og aritmetiske operator</p>
         <h1>arrays</h1>
             <p>liste af værdier eller objekter</p>
+            <p>En variabel der kan indeholde en liste af værdier</p>
             <p>elementsbyclass returnerer en array btw</p>
+            <p>kendetegnet er: []</p>
+            <p>Første element i et array ligger på index 0, arrays starter altid på 0</p>
+            <p>Tekniskset også et objekt</p>
         <h1>kontrolstruktur</h1>
             <p>if-else</p>
+                <p>bruges til at skabe et bestemt flow, afhængigt af hvad der sker eller hvad brugeren gør</p>
             <p>loops. Vi looper typisk på arrays. for loop, for each loop</p>
+                <p>bruges hvis der er noget vi vil have gentaget, et antal gange</p>
         <h1>objekter</h1>
-            <p></p>
-            <p>Kan indeholde to ting: funktion(metode), variabel(property)</p>
+            <p>En samling af relateret data som kan:</p>
+            <p>indeholde to ting: funktion(metode), variabel(property/værdier)</p>
             <p>Document er et objekt, get elementbyid er også et objektl, alle steder med et punktum</p>
+            <p>Kan genkendes på punktummer</p>
         <h1>funktioner</h1>
+            <p>Genrbrugeligkode</p>
             <p>en kommando eller smutvej</p>
             <p>getelementbyid er også en function</p>
-            <p>Function by expression</p>
+            <p>Måder at lave en funktion: Function declaration, Function by expression, Arrow function</p>
         <h1>variable scoope (herunder LET)</h1>
-            <p>Hvad er forskellen på let, var og const? forskellen på var og let er scoopet - altså hvor de virker henne. Var er et function scope, alle variabler lavet i en function med var er lokale variabler og virker KUN inde i funktionen.</p>
+            <p>Hvad er forskellen på let, var og const? forskellen på var og let er scoopet - altså hvor de virker henne. Var er et function scope, let - block scope. alle variabler lavet i en function med var er lokale variabler og virker KUN inde i funktionen.</p>
             <p>let og const har et lidt andet scoope. scoopet er bare en block af kode</p>
             <p>Lokale og globale variabler, det foreslås at bruge de lokale - fordi hvis man bruger globale kan man få problemer med rækkefølgen</p>
             <p>der er noget performance, ved at bruge const, skal computeren kun allokere hvad end jeg giver den og ikke mere</p>
@@ -62,6 +78,7 @@
             <p>Hvorfor skal vi kende var? Fordi const og let først blev lavet i 2016, så der er meget kode der er lavet i var</p>
             <p></p>
         <h1>Events</h1>
+            <p>et event er en hændelse, som sandsynligvis igang sætter en handling af javascript</p>
 <!--            <body onload = "myfunction()">
 <!--            <select onchange ="myfunction()">
 <!--            <button on click ="myFunction()">
