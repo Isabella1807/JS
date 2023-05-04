@@ -458,6 +458,33 @@
             Local variables are defined inside blocks of code {} and we refer to those as being or having block scope. cannot be used outside of a function.
         </li>
     </ul>
+
+    <h1>JavaScript loading</h1>
+    <p>Defer vs async?</p>
+    <p>Adding the defer attribute to a script result in that script running after the HTML document has been parsed, useful if the script depends on the html or other scripts</p>
+    <p>or: The defer attribute of a tag is a boolean attribute used to indicate that the script can be loaded but not executed until after the HTML document is fully parsed.</p>
+    <p>Scripts are loaded synchronously as they appear in an HTML file, before the following HTML is loaded and parsed. The async attribute can be used to load the scripts asynchronously, such that they will load in the background without blocking the HTML parser from continuing.</p>
+
+    <h1>The Document Object Model (DOM)</h1>
+    <p>The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.</p>
+    <p>The DOM also allows access to the attributes of an HTML element such as style, id, etc.</p>
+    <p>The document object (document.) allows scripts to access children of the DOM as properties.</p>
+
+    <h1>Select and Modify Elements</h1>
+    <ul>
+        <li>.querySelector() <br>
+            <p>The .querySelector() method allows us to specify a CSS selector as a string and returns the first element that matches that selector.</p>
+        </li>
+        <li>.getElementById() <br>
+            <p>To access an element directly by its id, you can use the aptly named .getElementById() method</p>
+        </li>
+        <li>.getElementsByClassName() <br>
+            <p>Return an array of elements unless we specific which index we want by adding []</p>
+        </li>
+        <li>.getElementsByTagName() <br>
+            <p>Return an array of elements unless we specific which index we want by adding []</p>
+        </li>
+    </ul>
 </main>
 </body>
 
