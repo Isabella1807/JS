@@ -215,7 +215,10 @@
         const unknown3 = true; <br>
         console.log(typeof unknown3); // Output: boolean
     </p>
-    <h2>Properties</h2>
+
+    <h2>Properties and Methods</h2>
+    <p>Properties(egenskaber) are named values associated with an Object. fx. An object called "person" would probably have the properties "name", "age" and "gender"</p>
+    <p>Methods is a function that is a property of an object.</p>
     <h3>String properties</h3>
     <ul>
         <li>.length <br>
@@ -229,10 +232,6 @@
             </ul>
         </li>
     </ul>
-    <h2>Methods</h2>
-    <p>
-        All types contains some properties and some of those properties are also methods which can perform an action.
-    </p>
     <h3>Strings methods</h3>
     <ul>
         <li>.toUpperCase()</li>
@@ -258,6 +257,7 @@
             <p>This will return a boolean, does the string start with the letter h? yes or no</p>
         </ul>
     </ul>
+
     <h2>Built-in Objects</h2>
     <p>Built-in Objects are collections of methods and properties that JavaScript </p>
     <ul>
@@ -485,7 +485,27 @@
             <p>Return an array of elements unless we specific which index we want by adding []</p>
         </li>
     </ul>
+    <br>
+    <p>The main difference between querySelector() and getElementsByTagName() is that querySelector() returns the first matching element it finds, while getElementsByClassName() returns a collection of elements (an HTMLCollection) that match the specified class name.</p>
+    <p>So, if you want to select the first element that matches a specific class name, you should use querySelector().</p>
+    <p>On the other hand, if you want to select all elements that match a specific class name, you should use getElementsByClassName().</p>
 </main>
 </body>
+<style>
+    p, ul, li {
+        font-size: 20px;
+    }
 
+    h1 {
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 30px;
+        font-style: italic;
+    }
+</style>
 </html>
