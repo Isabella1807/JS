@@ -79,11 +79,13 @@
             <p></p>
         <h1>Events</h1>
             <p>et event er en hændelse, som sandsynligvis igang sætter en handling af javascript</p>
-<!--            <body onload = "myfunction()">
-<!--            <select onchange ="myfunction()">
-<!--            <button on click ="myFunction()">
-<!--            <object.addEventListener("hvilken eventlistener", hvilket function skal kaldes);>
-<!--            <button.addEventListener("click", myscript>
+
+        <!-- <body onload = "myfunction()"> -->
+        <!-- <select onchange ="myfunction()"> -->
+        <!-- <button on click ="myFunction()"> -->
+        <!-- <object.addEventListener("hvilken eventlistener", hvilket function skal kaldes);> -->
+        <!-- <button.addEventListener("click", myscript> -->
+
         ////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////// OVER ALL ////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -229,6 +231,49 @@
 
         <h1>Funktioner</h1>
         <h1>Variabel scope og let</h1>
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////// Modern JS Development ////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        <h1>Template strings</h1>
+            <p>Variablen firstName kan indhegnes med ${} og det er en template string. Indenfor {}genkender den også Arithmetic Operatorer </p>
+                <script>
+                    function printtilkonsol(firstName){
+                        console.log(`Hello ${firstName}`);
+                    }
+                    printtilkonsol("Isabella");
+
+                    function createEmail(firstName, price) {
+                        let shipping = 5.95;
+                        console.log(`Hi ${firstName}! Thanks!
+                        Total: $${price}
+                        Shipping: $${shipping}
+                        Grand Total: $${price + shipping}`);
+                    }
+                    createEmail("Guy", 100);
+                </script>
+
+        <h1>Searching strings</h1>
+        <p>Måder at søge i strings på. Vil retunere en boolean. Case Sensitive</p>
+            <p>.startsWith("")</p>
+            <p>.endsWith("")</p>
+            <p>.includes("")</p>
+            <p>.search("")</p>
+                <p>Vil fortælle på hvilket index den første gang finder det indenfor ""</p>
+                <script>
+                    const planet = "Earth";
+                    console.log(planet.startsWith("Ear"));
+                    //returnere true
+                    console.log(planet.endsWith("Ear"));
+                    //returnere false
+                    console.log(planet.includes("r"));
+                    //returnere true
+                    console.log(planet.includes("Earth1"));
+                    //returnere false
+                    console.log(planet.search("art"));
+                    //returnere 1, fordi "art" start første gang på index 1. Husk E er på index 0.
+                </script>
 
 
     </main>
