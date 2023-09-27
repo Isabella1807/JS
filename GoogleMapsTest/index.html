@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCUkMGL1qJr-05Oj2ASbgEAqruWiyQxm4" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCUkMGL1qJr-05Oj2ASbgEAqruWiyQxm4&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCUkMGL1qJr-05Oj2ASbgEAqruWiyQxm4&callback=initMap"></script>
 </head>
 <body>
 <div id="map" style="height: 100%; width: 100%;"></div>
 
 <script>
     function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-            center: {lat: 56.26392, lng: 9.501785},
-            zoom: 8,
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 55.6761, lng: 12.5683},
+            zoom: 8
         });
+
+        // Make a request to the proxy server to fetch all charging stations in Denmark
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://your-proxy-server.com/proxy?url=https://api.openchargemap.io/v3/poi/?output=json&countrycode=DK&maxresults=100000', true);
+
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                // Parse the JSON response from the API
+                var chargingStations = JSON.parse(request.responseText);
+
+                // Loop through the charging stations and add a marker for each one
+                for (var i = 0; i < chargingStations.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: {lat: chargingStations[i].AddressInfo.Latitude, lng: chargingStations[i].AddressInfo.Longitude},
+                        map: map
+                    });
+                }
+            } else {
+                console.error('Unable to fetch charging station data from API.');
+            }
+        };
+
+        request.onerror = function() {
+            console.error('Unable to fetch charging station data from API.');
+        };
+
+        request.send();
     }
 </script>
 
@@ -27,4 +53,4 @@
     }
 </style>
 </body>
-</html>
+

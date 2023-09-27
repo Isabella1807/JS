@@ -23,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e40f3a4-65d9-46a6-bd75-2a72ab4aade3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codecademy/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Codecademy/notes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gang4_function_loops_scope_events/gang4_noter.html" beforeDir="false" afterPath="$PROJECT_DIR$/gang4_function_loops_scope_events/gang4_noter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleMapsTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleMapsTest/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +53,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,6 +73,7 @@
       <workItem from="1675197198825" duration="7382000" />
       <workItem from="1675280935028" duration="4557000" />
       <workItem from="1675412337478" duration="5091000" />
+      <workItem from="1683884477415" duration="2405000" />
     </task>
     <servers />
   </component>
