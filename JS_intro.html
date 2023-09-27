@@ -156,6 +156,25 @@
         <p> console.log ("hest"); </p> Laver en tekst i konsollen
         <p> variable = "<h1> hest </h1>"; </p> Ændre variablen og giver den en ny værdi, som her er en h1
 
+        <script>
+            //function declaration
+            function plusMaskinen(a, b) {
+                return a +b;
+            }
+
+            //Arrow function
+            //Når arrow functions har én "expression" er der return på som default
+            const plusMaskinen2 = (a, b) => a + b;
+
+
+            //Også arrow function
+            //Nu returneres der 2 expressions, så er return ikke default
+            const add = (a, b) => {
+                return [a + b, a - b];
+            };
+
+        </script>
+
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////
@@ -242,9 +261,9 @@
             <p>Megabit = million bit</p>
             <p>Kilobit = 1000bit?</p>
 
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////// Modern JS Development ////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////// Modern JS Development ////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////
 
         <h1>Template strings</h1>
             <p>Variablen firstName kan indhegnes med ${} og det er en template string. Indenfor {}genkender den også Arithmetic Operatorer </p>
@@ -285,9 +304,94 @@
                     //returnere 1, fordi "art" start første gang på index 1. Husk E er på index 0.
                 </script>
 
+        <h1>Writing maps</h1>
+        <p>Et map er et objekt som indeholder key value pairs</p>
+        <p>men i modsætning til objekter vises key-value pairs i den rækkefølge de blev tilføjet og man kan bruge hvad som helst som et key</p>
+        <script>
+            //OJBECT
+            //name & age er keys, Isa & 24 er values, myObject indeholder altså 2 key-value pairs
+            let myObject = {
+                name: "Isa",
+                age: "24",
+            }
 
+            //MAP
+            let myMap = new Map();
 
+            //.set er en constructor(eller method fra map objektet), react er en key, description er en value
+            //keys can be any type
+            //vi bruger .set metoden fra map objektet til at tilføje key-value pairs
+            myMap.set("react",{description:"ui"});
+            myMap.set("jest",{description:"testing"});
 
+            console.log(myMap);
+            console.log(myMap.get("react"));
+
+            let mySecondMap = new Map ([
+                [new Date(), "today"],
+                [2, {javascript: ["js", "node", "react"]}],
+                ["hej", [1, 2]]
+            ])
+
+            mySecondMap.forEach(function (item) {
+                console.log(item);
+            })
+
+            console.log(mySecondMap.size);
+        </script>
+
+        <h1>Date objektet</h1>
+        <p>et indbygget objekt i JS der gemmer dato og tid</p>
+        <p>uden nogen argumenter vil den give computerens dato og tid</p>
+
+        <script>
+            let minDato = new Date();
+            console.log(minDato);
+            //Console logger: Wed Sep 27 2023 22:40:36 GMT+0200 (Centraleuropæisk sommertid)
+
+            console.log(minDato.getMonth());
+            //console logs 8 selvom vi er i September(9), fordi de sættes i et array der starter på 0..
+
+            console.log(minDato.getMonth() +1);
+            //console logs 9
+        </script>
+
+        <h1>Sets</h1>
+        <p>en samling af værdier af alle datatyper, men hver værdi skal være unik</p>
+        <script>
+            let books = new Set();
+            books.add("Harry Potter & de vises sten");
+            books.add("Jorden husker");
+
+            //Methods
+            console.log(books);
+            console.log(books.size);
+            console.log("Er denne bog i biblioteket?", books.has("Jorden husker"));
+            books.delete("Harry Potter & de vises sten");
+
+            books.forEach(function(item) {
+                console.log(item)
+            })
+        </script>
+
+        <h1>Promises</h1>
+        <p>lidt ligesom en error besked hehe</p>
+        <script>
+            const delay = (seconds) =>
+                new Promise (
+                    (resolve, reject) => {
+                        if(typeof seconds != "number"){
+                            reject(
+                                new Error("seconds must be a number")
+                            );
+                        }
+                    setTimeout(resolve, seconds * 1000)}
+                    );
+
+            console.log("Zero Seconds");
+            delay(1).then(() => console.log("one second"));
+            delay(5).then(() => console.log("five second"));
+        </script>
     </main>
 </body>
 </html>
