@@ -159,19 +159,32 @@
         <script>
             //function declaration
             function plusMaskinen(a, b) {
-                return a +b;
+                return a + b;
             }
 
             //Arrow function
-            //Når arrow functions har én "expression" er der return på som default
-            const plusMaskinen2 = (a, b) => a + b;
+            //Når arrow functions har én "expression" er der return på som default, og {} kan fjernes
 
+            //Efter
+            const plusMaskinen2 = (a, b) => a + b;
 
             //Også arrow function
             //Nu returneres der 2 expressions, så er return ikke default
             const add = (a, b) => {
                 return [a + b, a - b];
             };
+
+            let person = {
+                name: "Isa",
+                hobbies: ["Game", "Eat", "Sleep"],
+                printHobbies: function(){
+                    this.hobbies.forEach((item, index) => {
+                        let string = `${this.name} likes to ${item} (${index})`;
+                        console.log(string);
+                    });
+                }
+            }
+            person.printHobbies();
 
         </script>
 
@@ -433,16 +446,18 @@
             console.log(`${minListe.join(", ")}`)
 
             let formattedListUS = new Intl.ListFormat("en-US");
-            console.log(`${formattedListUS.format(myList)}`);
+            console.log(`${formattedListUS.format(minListe)}`);
         </script>
 
         <h1>Spread operator</h1>
         <p>Med en spread operator kan man bruge indholdet af et array som et argument.</p>
         <p>spread operatoren bruges med ... foran </p>
         <script>
-            const array = [1,2,3,4,5];
-            (...array);
+            // const array = [1,2,3,4,5];
+            // (...array);
         </script>
+
+        <h1></h1>
 
     </main>
 </body>
