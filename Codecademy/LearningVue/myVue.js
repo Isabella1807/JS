@@ -109,7 +109,7 @@ console.log(formatList('de-DE'));
 console.log("----------------------------------Opgave 2.1 ------------------------------------------");
 //Find eksempeler på brug af spread operatoren
 
-const originalStringArray = ["en","to","tre","fire","fem","seks",];
+const originalStringArray = ["en","en","to","to","tre","fire","fem","seks","dut","ti"];
 const originalNumArray = [1,2,3,4,5,6,7,8,9];
 
 //Kopiere arrays
@@ -135,4 +135,35 @@ const obj2 = {
 const joinedObj = {...obj1, ...obj2};
 console.log(joinedObj);
 
+//Destruktering af arrays
+const destruct = [first, ...rest] = [originalNumArray];
+console.log(destruct);
 
+console.log("---------------------------------- Opgave 2.3 ------------------------------------------");
+//Lav denne function om til en arrow function. Funktionen finder alle elementer i arrayet der starter med d
+
+//
+function startsWithT(input){
+    return input[0].toLowerCase() === "t";
+}
+
+//Altid en god ide at lave til lowercase, fordi js er case sensitive
+startsWithD = (input) => {
+    return input[0].toLowerCase() ==='d';
+}
+//.filter Går hver entry igennem
+let liste = originalStringArray.filter(startsWithD);
+console.log(`Disse starter med D: ${liste}`);
+
+let liste2 = originalStringArray.filter(startsWithT);
+console.log(`Disse starter med T: ${liste2}`);
+
+console.log("---------------------------------- Opgave 2.4 ------------------------------------------");
+//Skriv en kode som flytter værdier fra et array over i et set og så tilbage i et array
+//komprimer det til kun af fylde et enkelt statement
+//Output til konsollen
+
+const myNewArray = ["Isa","Jens","Bo", "Thomas","Malina","Nicolaj","Caroline"];
+
+const uniqueLifters =[...new Set(myNewArray)];
+console.log(uniqueLifters);
