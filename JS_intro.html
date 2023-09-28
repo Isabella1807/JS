@@ -345,7 +345,11 @@
         <p>uden nogen argumenter vil den give computerens dato og tid</p>
 
         <script>
+            //Instansiere et nyt dato objekt
             let minDato = new Date();
+
+            //Method er en funktion der er tilknyttet et objekt
+
             console.log(minDato);
             //Console logger: Wed Sep 27 2023 22:40:36 GMT+0200 (Centraleuropæisk sommertid)
 
@@ -354,6 +358,10 @@
 
             console.log(minDato.getMonth() +1);
             //console logs 9
+
+            //2 siger der skal være 2 decimaler, 0 siger decimalerne skal være 0
+            let klokken = minDato.getMinutes().toString().padStart(2,0);
+
         </script>
 
         <h1>Sets</h1>
@@ -392,6 +400,50 @@
             delay(1).then(() => console.log("one second"));
             delay(5).then(() => console.log("five second"));
         </script>
+
+        <h1>Numbers & .math</h1>
+        <p></p>
+        <script>
+            let randomNumber = Math.floor(Math.random() * 10) + 1
+
+            let minNum = 50;
+            let maxNum = 75;
+            let number = Math.floor(Math.random() * (minNum - maxNum + 1)) + minNum;
+
+            console.log(number);
+
+          console.log("-------------------Opgave 1.5--------------------")
+            //Generer et tilfældigt tal mellem 66 og 500
+
+            //på linje 413, hvis vi ikke plusser min er fordi ellers kan vi ikke ramme 66 eller 500.
+            //min = 66 & max = 500 er default værdier, så med mindre andre argumenter er givet - går vi med default parametrene
+            let generateRandomNumber = (min = 66, max = 500) => {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+
+            console.log(`Execute Order ${generateRandomNumber()}`);
+            console.log(`Execute Order ${generateRandomNumber(100, 200)}`);
+        </script>
+
+        <h1>Arrays</h1>
+        <p></p>
+        <script>
+            let minListe = ["Isa,Job,bog"];
+
+            console.log(`${minListe.join(", ")}`)
+
+            let formattedListUS = new Intl.ListFormat("en-US");
+            console.log(`${formattedListUS.format(myList)}`);
+        </script>
+
+        <h1>Spread operator</h1>
+        <p>Med en spread operator kan man bruge indholdet af et array som et argument.</p>
+        <p>spread operatoren bruges med ... foran </p>
+        <script>
+            const array = [1,2,3,4,5];
+            (...array);
+        </script>
+
     </main>
 </body>
 </html>
