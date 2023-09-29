@@ -353,6 +353,16 @@
             console.log(mySecondMap.size);
         </script>
 
+        <h1>.Method objektet</h1>
+        <script>
+            //.map har en function som argument, også kaldet en callback function. Den function er en unanvgivet function som tager argumentet "number" af listen array
+            //map kører igennem listen én af gangen og smider hver eneste element ind som argument(altså istedet for number)
+            const mapMethodSyntax = array.map(function(parameter){
+                return parameter + 2;
+            });
+
+        </script>
+
         <h1>Date objektet</h1>
         <p>et indbygget objekt i JS der gemmer dato og tid</p>
         <p>uden nogen argumenter vil den give computerens dato og tid</p>
@@ -439,7 +449,15 @@
         </script>
 
         <h1>Arrays</h1>
-        <p></p>
+        <p>Nogle metoder der kan bruges til arrays</p>
+        <p>forEach</p>
+        <p>.map</p>
+        <p>indexOf() starter på index 0 hvis søgeværden findes returneres itemets index</p>
+        <p>lastIndexOf() starter på sidste index og gør det samme som indexof</p>
+        <p>includes() returnerer true,</p>
+        <p>find()</p>
+        <p>findIndex()</p>
+
         <script>
             let minListe = ["Isa,Job,bog"];
 
@@ -447,6 +465,35 @@
 
             let formattedListUS = new Intl.ListFormat("en-US");
             console.log(`${formattedListUS.format(minListe)}`);
+
+            //en anonym function som finder elementer der ikke inkluderer mellemrum
+            let navn = array.find(parameter => !parameter.includes(''));
+
+            //ARRAY METODER OG DERES SYNTAKS
+
+            //slice metoden
+            let navn = [...array.slice(0,variabel), ...array.slice(array+1)];
+
+            //splice metoden
+            let startIndex = array.indexOf("string");
+            array.splice(startIndex, howManyToRemove, whatToAdd(optional));
+            console.log(array);
+
+            //sort metoden - sorterer i alfabetisk rækkefølge
+            array.sort();
+            console.log(array);
+
+            array.sort(
+                function(a,b){ //Callback function der tager nogle parametre
+                    if (a.age < b.age){
+                        return -1;
+                    } else if (a.age > b.age){
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                })
+
         </script>
 
         <h1>Spread operator</h1>

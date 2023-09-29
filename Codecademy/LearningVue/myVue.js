@@ -167,3 +167,72 @@ const myNewArray = ["Isa","Jens","Bo", "Thomas","Malina","Nicolaj","Caroline"];
 
 const uniqueLifters =[...new Set(myNewArray)];
 console.log(uniqueLifters);
+
+console.log("---------------------------------- Opgave 2.5 ------------------------------------------");
+//find indices på alle forekomster af en specifik værdi i et array
+//output de fundne indices via konsollen
+
+
+const originalStringArrayKopi = [...originalStringArray];
+
+const myIndex = originalStringArrayKopi.indexOf("to");
+console.log(myIndex);
+
+// const myIndex2 = originalStringArrayKopi.forEach((element) => console.log(myIndex2));
+// console.log(myIndex2);
+//
+// const myFunc = () => {
+//     originalStringArrayKopi.forEach((item, index) => {
+//         ??
+//     })
+
+
+//.map har en function som argument, også kaldet en callback function. Den function er en unanvgivet function som tager argumentet "number" af listen array
+//map kører igennem listen én af gangen og smider hver eneste element ind som argument(altså istedet for number)
+// const mapMethodSyntax = array.map(function(parameter){
+//     return parameter + 2;
+// });
+
+console.log("---------------------------------- Opgave 2.6 ------------------------------------------");
+//Find alle værdier i et array som imødekommer et kriterie
+//outout via konsollen
+
+const myPrompt = prompt("Hvad skal listen indeholde?");
+const myFilter = myList.filter(parameter => parameter.includes(myPrompt));
+
+//.join for at få mellemrum mellem tingene, men den slutter ikke med &, så måske intl
+console.log(`Listen indeholder disse: ${myFilter} af bogstavet: ${myPrompt}`);
+
+//Prøver at internationaliserer for at få , og &
+// const formatMyList = (input = "en-EN") => {
+//     const formatted = new Intl.ListFormat(Locale, {style: 'short', type: 'unit'});
+//     return formatted.format(myList);
+// }
+
+console.log("---------------------------------- Opgave 2.7 ------------------------------------------");
+//Skriv en optimeret version af koden fra før:
+
+//BTW koden sorterer a og b og placerer dem i forhold til 1, 0 og -1.
+// ALTSÅ den tager 2 værdier fra arraey og kigger på om sammenligninen bliver positiv eller negativ. Positiv så sættes a før b, negativ sættes b før a. mener jeg..
+
+//To optimize
+array.sort(function(a,b){
+    if (a.age < b.age){
+        return -1;
+    } else if (a.age > b.age){
+        return 1;
+    } else {
+        return 0;
+    }
+});
+
+//Optimized
+array.sort(function(a,b){
+    return a.age - b.age;
+})
+
+//Endnu mere optimized, med en anonym callback function
+array.sort((a,b) => a.age - b.age);
+
+
+
