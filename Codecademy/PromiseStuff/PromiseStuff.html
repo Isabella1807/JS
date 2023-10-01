@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>eyoo</h1>
+<div class="user">
+    <h3 class="title" id="myTitle"></h3>
+    <h3 class="age" id="myAge"></h3>
+</div>
+<p id="error_msg"></p>
+<h2 id="myLoadingBar">... LOADING ...</h2>
+<script defer>
+    const titleElement = document.getElementById("myTitle");
+    const ageElement = document.getElementById("myAge");
+    const myLoadingBar = document.getElementById("myLoadingBar");
+    const myErrorMsg = document.getElementById("error_msg");
+
+    /****/
+
+    const UserData = {
+        username: "hanne",
+        age: 48,
+    };
+    const ApiRequest = () => Math.random() > .5 ? {
+        UserData,
+        Status: 200,
+    } : {
+        UserData: {},
+        Status: 404,
+    }
+
+    const hideLoading = () => {
+        myLoadingBar.style.display = "none";
+    }
+    const showLoading = () => {
+        myLoadingBar.style.display = "block";
+    }
+    const showErrorMessage = (msg) => {
+        myErrorMsg.innerText = `An error occurred: ${msg}`;
+    }
+
+    hideLoading();
+
+    //*/*/*/*/*//**//
+
+    const GetUserData = new Promise((resolve, reject) => {
+        const api_data = ApiRequest();
+
+        setTimeout(() => {
+            if (api_data.Status === 200) {
+                resolve(api_data.UserData);
+            } else if (api_data.status === 301) {
+                reject("unknown password");
+            } else if (api_data.status === 304) {
+                reject("password missing small letters");
+            } else {
+                reject("user not found");
+            }
+        }, 1500);
+    });
+
+    /* Show user data */
+    showLoading();
+    GetUserData.then((a) => {
+        /* populate html */
+        titleElement.innerText = a.username;
+        ageElement.innerText = a.age;
+        // hide loading
+        hideLoading();
+    }).catch((error) => {
+        hideLoading();
+        showErrorMessage(error);
+    });
+
+</script>
+</body>
+</html>

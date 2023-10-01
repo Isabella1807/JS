@@ -5,507 +5,558 @@
     <title>JavaScript test</title>
 </head>
 <body>
-    <main>
+<main>
 
-        <p>ALTID TILFØJ DEFER TIL SCRIPT SRC</p>
+    <p>ALTID TILFØJ DEFER TIL SCRIPT SRC</p>
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////ALT DET JEG SKAL KUNNE CHECKLSITE /////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////ALT DET JEG SKAL KUNNE CHECKLSITE /////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
-        <h1>versionsstyring herunder git og github</h1>
-            <p>man kan styre version af projeket og man kan arbejde sammen</p>
-            <p>hvad er forskellen på git og github? git er softwaren altså selve koden, github er en platform/websted, hvor vi har vores kode liggende</p>
-            <p>Udfordringer: Hvis man arbejder i samme fil opstår der hurtigt konflikter eller hvis man bare committer og pusher uden at pull eller resolve.</p>
-        <h1>Hvad er Javascript og hvad kan det bruges til</h1>
-            <p>objekt og event baseret scripting sprog (scripting sprog omsætter først til kode senere?, objekt og event baseret. Event baseret - vi venter på at der sker noget. Objekt baseret - vi indkapsler koden i objekter</p>
-            <p>gør hjemmesider dynamiske</p>
-            <p>manipulere med DOM'en</p>
-            <p>client-side programmering(hjemmesiden kører hos brugeren), kan også bruges til server-side.  </p>
-            <p>kan bruges til formvalidering, flytte og manipulere html objekter og andet</p>
-            <p>Placeringer: 1. Inline -  direkte på linje. 2. Ekstern - eget JS dokument. 3. Internt - I HTML med script tag</p>
-            <p>Fordele ved at placere eksternt: 1. Nemmere at kunne overskue alting, 2. Genbrugelighed. 3. Vi undgår renderblocking, optimere visning af css</p>
-        <h1>DOM</h1>
-            <p>Strukturen på tilhørende html dokument</p>
-            <p>Objekt model af html'en</p>
-            <p>Læser html dokumentet og opbygger så Objekt modellen baseret på dokumentet </p>
-        <h1>placering og udførelse af JS</h1>
-            <p>i script som kan være både inline og ekstern</p>
-            <p>Hvad er fordelen ved at smide i en ekstern? Det er mere overskueligt & loade når det skal loades & koden kan genbruges på forskellige sider </p>
-        <p> Det er smart at indkapsle ting i JS, men det kan også give mening at lave et main.js. </p>
-        <p>Hvad er problemet med at have én fil til ALT JS koden? ikke hav JS kode til en html side, som ikke bruges. </p>
-        <h1>fejlfinding, hvordan ved jeg om JS virker</h1>
-            <p>Tjek om filen findes og om den er linket rigtigt</p>
-            <p>Tjek konsol panelet</p>
-            <p>console.log</p>
-            <p>og alert</p>
-        <h1>variabler og typer</h1>
-            <p>variabler er skuffer der indeholder værdier og bruges til at gøre ting nemmere og hurtigere fordi ting kan puttes i kasser</p>
-            <p>Variabler bruges til at gøre det lettere for os selv og gøre koden kortere. Det gør også koden hurtigere, fordi vi genrbuger dataen fra variablen.</p>
-            <p>variabler kan være forskellige typer: primitive: strings, booleans, number, null, undefined. Ikke primitive: object, array</p>
-            <p></p>
-        <h1>operatorer</h1>
-            <p>nogle symboler der opererer på noget</p>
-            <p>tildelings, sammenlignings og aritmetiske operator</p>
-        <h1>arrays</h1>
-            <p>liste af værdier eller objekter</p>
-            <p>En variabel der kan indeholde en liste af værdier</p>
-            <p>elementsbyclass returnerer en array btw</p>
-            <p>kendetegnet er: []</p>
-            <p>Første element i et array ligger på index 0, arrays starter altid på 0</p>
-            <p>Tekniskset også et objekt</p>
-        <h1>kontrolstruktur</h1>
-            <p>if-else</p>
-                <p>bruges til at skabe et bestemt flow, afhængigt af hvad der sker eller hvad brugeren gør</p>
-            <p>loops. Vi looper typisk på arrays. for loop, for each loop</p>
-                <p>bruges hvis der er noget vi vil have gentaget, et antal gange</p>
-        <h1>objekter</h1>
-            <p>En samling af relateret data som kan:</p>
-            <p>indeholde to ting: funktion(metode), variabel(property/værdier)</p>
-            <p>Document er et objekt, get elementbyid er også et objektl, alle steder med et punktum</p>
-            <p>Kan genkendes på punktummer</p>
-        <h1>funktioner</h1>
-            <p>Genrbrugeligkode</p>
-            <p>en kommando eller smutvej</p>
-            <p>getelementbyid er også en function</p>
-            <p>Måder at lave en funktion: Function declaration, Function by expression, Arrow function</p>
-        <h1>variable scoope (herunder LET)</h1>
-            <p>Hvad er forskellen på let, var og const? forskellen på var og let er scoopet - altså hvor de virker henne. Var er et function scope, let - block scope. alle variabler lavet i en function med var er lokale variabler og virker KUN inde i funktionen.</p>
-            <p>let og const har et lidt andet scoope. scoopet er bare en block af kode</p>
-            <p>Lokale og globale variabler, det foreslås at bruge de lokale - fordi hvis man bruger globale kan man få problemer med rækkefølgen</p>
-            <p>der er noget performance, ved at bruge const, skal computeren kun allokere hvad end jeg giver den og ikke mere</p>
-            <p>Der er noget sikkerhed i at bruge const, det forhindre at vi bruger det samme function eller variabel navn og den ene overskrider den anden</p>
-            <p>Hvorfor skal vi kende var? Fordi const og let først blev lavet i 2016, så der er meget kode der er lavet i var</p>
-            <p></p>
-        <h1>Events</h1>
-            <p>et event er en hændelse, som sandsynligvis igang sætter en handling af javascript</p>
+    <h1>versionsstyring herunder git og github</h1>
+    <p>man kan styre version af projeket og man kan arbejde sammen</p>
+    <p>hvad er forskellen på git og github? git er softwaren altså selve koden, github er en platform/websted, hvor vi
+        har vores kode liggende</p>
+    <p>Udfordringer: Hvis man arbejder i samme fil opstår der hurtigt konflikter eller hvis man bare committer og pusher
+        uden at pull eller resolve.</p>
+    <h1>Hvad er Javascript og hvad kan det bruges til</h1>
+    <p>objekt og event baseret scripting sprog (scripting sprog omsætter først til kode senere?, objekt og event
+        baseret. Event baseret - vi venter på at der sker noget. Objekt baseret - vi indkapsler koden i objekter</p>
+    <p>gør hjemmesider dynamiske</p>
+    <p>manipulere med DOM'en</p>
+    <p>client-side programmering(hjemmesiden kører hos brugeren), kan også bruges til server-side. </p>
+    <p>kan bruges til formvalidering, flytte og manipulere html objekter og andet</p>
+    <p>Placeringer: 1. Inline - direkte på linje. 2. Ekstern - eget JS dokument. 3. Internt - I HTML med script tag</p>
+    <p>Fordele ved at placere eksternt: 1. Nemmere at kunne overskue alting, 2. Genbrugelighed. 3. Vi undgår
+        renderblocking, optimere visning af css</p>
+    <h1>DOM</h1>
+    <p>Strukturen på tilhørende html dokument</p>
+    <p>Objekt model af html'en</p>
+    <p>Læser html dokumentet og opbygger så Objekt modellen baseret på dokumentet </p>
+    <h1>placering og udførelse af JS</h1>
+    <p>i script som kan være både inline og ekstern</p>
+    <p>Hvad er fordelen ved at smide i en ekstern? Det er mere overskueligt & loade når det skal loades & koden kan
+        genbruges på forskellige sider </p>
+    <p> Det er smart at indkapsle ting i JS, men det kan også give mening at lave et main.js. </p>
+    <p>Hvad er problemet med at have én fil til ALT JS koden? ikke hav JS kode til en html side, som ikke bruges. </p>
+    <h1>fejlfinding, hvordan ved jeg om JS virker</h1>
+    <p>Tjek om filen findes og om den er linket rigtigt</p>
+    <p>Tjek konsol panelet</p>
+    <p>console.log</p>
+    <p>og alert</p>
+    <h1>variabler og typer</h1>
+    <p>variabler er skuffer der indeholder værdier og bruges til at gøre ting nemmere og hurtigere fordi ting kan puttes
+        i kasser</p>
+    <p>Variabler bruges til at gøre det lettere for os selv og gøre koden kortere. Det gør også koden hurtigere, fordi
+        vi genrbuger dataen fra variablen.</p>
+    <p>variabler kan være forskellige typer: primitive: strings, booleans, number, null, undefined. Ikke primitive:
+        object, array</p>
+    <p></p>
+    <h1>operatorer</h1>
+    <p>nogle symboler der opererer på noget</p>
+    <p>tildelings, sammenlignings og aritmetiske operator</p>
+    <h1>arrays</h1>
+    <p>liste af værdier eller objekter</p>
+    <p>En variabel der kan indeholde en liste af værdier</p>
+    <p>elementsbyclass returnerer en array btw</p>
+    <p>kendetegnet er: []</p>
+    <p>Første element i et array ligger på index 0, arrays starter altid på 0</p>
+    <p>Tekniskset også et objekt</p>
+    <h1>kontrolstruktur</h1>
+    <p>if-else</p>
+    <p>bruges til at skabe et bestemt flow, afhængigt af hvad der sker eller hvad brugeren gør</p>
+    <p>loops. Vi looper typisk på arrays. for loop, for each loop</p>
+    <p>bruges hvis der er noget vi vil have gentaget, et antal gange</p>
+    <h1>objekter</h1>
+    <p>En samling af relateret data som kan:</p>
+    <p>indeholde to ting: funktion(metode), variabel(property/værdier)</p>
+    <p>Document er et objekt, get elementbyid er også et objektl, alle steder med et punktum</p>
+    <p>Kan genkendes på punktummer</p>
+    <h1>funktioner</h1>
+    <p>Genrbrugeligkode</p>
+    <p>en kommando eller smutvej</p>
+    <p>getelementbyid er også en function</p>
+    <p>Måder at lave en funktion: Function declaration, Function by expression, Arrow function</p>
+    <h1>variable scoope (herunder LET)</h1>
+    <p>Hvad er forskellen på let, var og const? forskellen på var og let er scoopet - altså hvor de virker henne. Var er
+        et function scope, let - block scope. alle variabler lavet i en function med var er lokale variabler og virker
+        KUN inde i funktionen.</p>
+    <p>let og const har et lidt andet scoope. scoopet er bare en block af kode</p>
+    <p>Lokale og globale variabler, det foreslås at bruge de lokale - fordi hvis man bruger globale kan man få problemer
+        med rækkefølgen</p>
+    <p>der er noget performance, ved at bruge const, skal computeren kun allokere hvad end jeg giver den og ikke
+        mere</p>
+    <p>Der er noget sikkerhed i at bruge const, det forhindre at vi bruger det samme function eller variabel navn og den
+        ene overskrider den anden</p>
+    <p>Hvorfor skal vi kende var? Fordi const og let først blev lavet i 2016, så der er meget kode der er lavet i
+        var</p>
+    <p></p>
+    <h1>Events</h1>
+    <p>et event er en hændelse, som sandsynligvis igang sætter en handling af javascript</p>
 
-        <!-- <body onload = "myfunction()"> -->
-        <!-- <select onchange ="myfunction()"> -->
-        <!-- <button on click ="myFunction()"> -->
-        <!-- <object.addEventListener("hvilken eventlistener", hvilket function skal kaldes);> -->
-        <!-- <button.addEventListener("click", myscript> -->
+    <!-- <body onload = "myfunction()"> -->
+    <!-- <select onchange ="myfunction()"> -->
+    <!-- <button on click ="myFunction()"> -->
+    <!-- <object.addEventListener("hvilken eventlistener", hvilket function skal kaldes);> -->
+    <!-- <button.addEventListener("click", myscript> -->
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////// OVER ALL ////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////// OVER ALL ////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
-        <h1>Eksamens spørgsmål</h1>
+    <h1>Eksamens spørgsmål</h1>
 
-        <p>hvad er versionsstyring</p>
+    <p>hvad er versionsstyring</p>
 
-        <p>hvad er javascript og hvad bruges det til</p>
-            <p>JavsScript bruges til at lave Dynamiske hjemmesider istedet for statiske sider. JavaScript ændre ting direkte på siden</p>
-            <p>oversættes først til maskin kode når koden kompileres</p>
-            <p>Javascript bruges ofte til client-side programmering</p>
-            <p>client side er vores browser</p>
-            <p>Der findes og server-side kodning</p>
+    <p>hvad er javascript og hvad bruges det til</p>
+    <p>JavsScript bruges til at lave Dynamiske hjemmesider istedet for statiske sider. JavaScript ændre ting direkte på
+        siden</p>
+    <p>oversættes først til maskin kode når koden kompileres</p>
+    <p>Javascript bruges ofte til client-side programmering</p>
+    <p>client side er vores browser</p>
+    <p>Der findes og server-side kodning</p>
 
-            <p>JavaScript er oftest brugt til image manipulation, validering af forms og andre dynamiske ændringer af indhold. Indhold af html og css kan ændres med JavaScript</p>
+    <p>JavaScript er oftest brugt til image manipulation, validering af forms og andre dynamiske ændringer af indhold.
+        Indhold af html og css kan ændres med JavaScript</p>
 
-            <p>Hvorfor ikke bare bruge css? tommelfingerregel: Hvis CSS kan gøre det - gør det med css, fordi browseren er lidt hurtigere til css</p>
-
-
-        <p>hvad er variabler og hvad bruges de til</p>
-            <p>var</p>
-                <p>Definerer en variable</p>
-            <p>let</p>
-                <p>Definerer en variable der ikke kan blive defineret igen</p>
-            <p>const</p>
-                <p>Hvis en variable ALDRIG skal ændres igen, brug const</p>
-
-
-        <p>hvad er kontrolstruktur og hvad bruger du dem til?</p>
-            <p>if og else if</p>
-
-        <p>hvad er et array og hvad bruges de til?</p>
-
-        <p>hvad er funktioner og hvad bruges de til?</p>
-
-        <p>hvad er event-listener og hvad bruges de til?</p>
-
-        <p>hvad er DOM og hvad bruges det til?</p>
-            <p>Direct object model</p>
-
-        <p>hvad er et objekt og hvad bruges det til?</p>
-            <p>objekt kan indeholde 2 ting </p>
-            <p>en metoder(functions) eller variable </p>
-            <p>så den kan enten gøre noget eller indeholde noget</p>
-            <p>Objekter kan indeholde værdier og kan gøre noget</p>
-            <p>document. er et objekt</p>
-
-        <h1>Mine spørgsmål</h1>
-        <p>Hvad er declare og assign?</p>
-        <p>Hvilkle operatorer findes der og hvad gør de?</p>
+    <p>Hvorfor ikke bare bruge css? tommelfingerregel: Hvis CSS kan gøre det - gør det med css, fordi browseren er lidt
+        hurtigere til css</p>
 
 
+    <p>hvad er variabler og hvad bruges de til</p>
+    <p>var</p>
+    <p>Definerer en variable</p>
+    <p>let</p>
+    <p>Definerer en variable der ikke kan blive defineret igen</p>
+    <p>const</p>
+    <p>Hvis en variable ALDRIG skal ændres igen, brug const</p>
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////// 1. gang ///////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        <h1>Første gang - Intro til JavaScript</h1>
-        <h2>hvordan anvendes github desktop til at arbejde sammen om et projekt?</h2>
-        <h2>Hvad er JavaScript og hvad bruges t det til</h2>
-        <h2>hvordan testes og implementeres JS</h2>
+    <p>hvad er kontrolstruktur og hvad bruger du dem til?</p>
+    <p>if og else if</p>
 
-        <p>Variable = noget der kan ændre sig, noget vi kan putte noget i</p>
+    <p>hvad er et array og hvad bruges de til?</p>
 
-        <h1>JS funktioner</h1>
-        <p> alert ("hej"); </p> Laver en pop up
-        <p> console.log ("hest"); </p> Laver en tekst i konsollen
-        <p> variable = "<h1> hest </h1>"; </p> Ændre variablen og giver den en ny værdi, som her er en h1
+    <p>hvad er funktioner og hvad bruges de til?</p>
+
+    <p>hvad er event-listener og hvad bruges de til?</p>
+
+    <p>hvad er DOM og hvad bruges det til?</p>
+    <p>Direct object model</p>
+
+    <p>hvad er et objekt og hvad bruges det til?</p>
+    <p>objekt kan indeholde 2 ting </p>
+    <p>en metoder(functions) eller variable </p>
+    <p>så den kan enten gøre noget eller indeholde noget</p>
+    <p>Objekter kan indeholde værdier og kan gøre noget</p>
+    <p>document. er et objekt</p>
+
+    <h1>Mine spørgsmål</h1>
+    <p>Hvad er declare og assign?</p>
+    <p>Hvilkle operatorer findes der og hvad gør de?</p>
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////// 1. gang ///////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    <h1>Første gang - Intro til JavaScript</h1>
+    <h2>hvordan anvendes github desktop til at arbejde sammen om et projekt?</h2>
+    <h2>Hvad er JavaScript og hvad bruges t det til</h2>
+    <h2>hvordan testes og implementeres JS</h2>
+
+    <p>Variable = noget der kan ændre sig, noget vi kan putte noget i</p>
+
+    <h1>JS funktioner</h1>
+    <p> alert ("hej"); </p> Laver en pop up
+    <p> console.log ("hest"); </p> Laver en tekst i konsollen
+    <p> variable = "
+    <h1> hest </h1>"; </p> Ændre variablen og giver den en ny værdi, som her er en h1
+
+    <script>
+        //function declaration
+        function plusMaskinen(a, b) {
+            return a + b;
+        }
+
+        //Arrow function
+        //Når arrow functions har én "expression" er der return på som default, og {} kan fjernes
+
+        //Efter
+        const plusMaskinen2 = (a, b) => a + b;
+
+        //Også arrow function
+        //Nu returneres der 2 expressions, så er return ikke default
+        const add = (a, b) => {
+            return [a + b, a - b];
+        };
+
+        let person = {
+            name: "Isa",
+            hobbies: ["Game", "Eat", "Sleep"],
+            printHobbies: function () {
+                this.hobbies.forEach((item, index) => {
+                    let string = `${this.name} likes to ${item} (${index})`;
+                    console.log(string);
+                });
+            }
+        }
+        person.printHobbies();
+
+    </script>
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////// 2. gang //////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    <h1>anden gang spørgsmål</h1>
+
+    <p>hvordan tester og implementerers js</p>
+    <p>kig i konsol panellet</p>
+    <p>man kan teste om det virker med console.log, f.eks. skriv i toppen af js dokumentet console.log("JS virker";) så
+        kan man se at JS har kontakt med html dokumentet</p>
+    <p>Men kan implementere JS i et ekstern dokument eller inline</p>
+
+    <p>JS koderegler og god praksis</p>
+    <p>Javascript er case-sensitiv</p>
+    <p>Camelcase, en metode for at få sigende variabel navne</p>
+    <p>Variabler med småt og funktioner med stort</p>
+    <p>Vi må ikke bruge æ, ø og å</p>
+    <p>Det er ligemeget om der er mellemrum, men det gør det nemmere at læse med mellemrum</p>
+    <p>hvert statement skal slutte med semicolon, JavaScript virker dog uden, men folk påstår det er nemmere at læse med
+        semicolon efter</p>
+    <p>Brug comments ofte</p>
+
+    <p>Hvad er DOM´en</p>
+    <p>Document Object Model, nok også kaldet træ struktur</p>
+    <p>En objekt model af vores dokument</p>
+    <p>Strukturen på html (og css?? ikke nævn det though)</p>
+    <p>DOM har en pyramide struktur og viser lidt hvem der er børn af hvem</p>
+    <p>Man kan se DOM strukturen i konsollen på hjemmesiden, højre klik + undersøg</p>
+
+    <p>hvad er variabler og hvad bruges de til</p>
+    <p>en variabel er en kasse eller skuffe der kan indeholde en værdi</p>
+    <p>Varibler bruges til at spare tid og plads. I stedet for at copy paste en hel masse informationer,
+        hvergang de skal bruges kan man bare sige "hiv fat i kassen navnet hund" variablen indeholder så en helt masse
+        informationer om "hund" f,eks. farve, alder, hunderace.</p>
+    <p>variabler bruges til at gemme information/data om:
+        - brugeren (navn, alder, andet)
+        - Elementers placering
+        - tæller eller timer ved quiz
+        - Genbrugelighed </p>
+
+    <p>Datatyper</p>
+    <p> Numbers: I JS laver den ikke forskel på ints og floats
+        Strings: Tekst og skal angives med ""
+        Booleans: Sandt eller falsk. Booleans fylder mindre end strings
+        Undefined: declared men ingen assigned værdi
+        Null: declared, men ingen værdi
+        Array: En liste af variabler, kan indeholde flere værdier
+        Objects: kan indehole variabler og funktioner.
+        bigint: Et meget højt tal
+        symbol: bruges til at lave unikke identifiers, der ikke kan overskrives eller duplikeres
+        function:
 
         <script>
-            //function declaration
-            function plusMaskinen(a, b) {
-                return a + b;
-            }
-
-            //Arrow function
-            //Når arrow functions har én "expression" er der return på som default, og {} kan fjernes
-
-            //Efter
-            const plusMaskinen2 = (a, b) => a + b;
-
-            //Også arrow function
-            //Nu returneres der 2 expressions, så er return ikke default
-            const add = (a, b) => {
-                return [a + b, a - b];
-            };
-
-            let person = {
-                name: "Isa",
-                hobbies: ["Game", "Eat", "Sleep"],
-                printHobbies: function(){
-                    this.hobbies.forEach((item, index) => {
-                        let string = `${this.name} likes to ${item} (${index})`;
-                        console.log(string);
-                    });
-                }
-            }
-            person.printHobbies();
-
+            const array = ["Isa,Job,bog"];
         </script>
 
-
-
         /////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////// 2. gang //////////////////////////////////////////////
+        ////////////////////////////////////// 3. gang //////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        <h1>anden gang spørgsmål</h1>
+    <h1>Hvad er operatorer og hvordan kodes de</h1>
+    <p>en operator er et symbol eller function som udfører en operation</p>
+    <p>sammenlignings operatorer_ ==, ===, !=</p>
+    <p>tildelings operator: = </p>
+    <p>artimetiske operatorer: + - * /</p>
 
-        <p>hvordan tester og implementerers js</p>
-            <p>kig i konsol panellet</p>
-            <p>man kan teste om det virker med console.log, f.eks. skriv i toppen af js dokumentet console.log("JS virker";) så kan man se at JS har kontakt med html dokumentet</p>
-            <p>Men kan implementere JS i et ekstern dokument eller inline</p>
+    <h1>Hvad er en kontrolstruktur og hvordan kodes en af dem (if-else)</h1>
+    <h1>hvad er et array og hvordan kodes de?</h1>
+    <p>En liste af værdier</p>
+    <p>skrives altid med []</p>
+    <p>arrays starter på position 0</p>
 
-        <p>JS koderegler og god praksis</p>
-            <p>Javascript er case-sensitiv</p>
-            <p>Camelcase, en metode for at få sigende variabel navne</p>
-            <p>Variabler med småt og funktioner med stort</p>
-            <p>Vi må ikke bruge æ, ø og å</p>
-            <p>Det er ligemeget om der er mellemrum, men det gør det nemmere at læse med mellemrum</p>
-            <p>hvert statement skal slutte med semicolon, JavaScript virker dog uden, men folk påstår det er nemmere at læse med semicolon efter</p>
-            <p>Brug comments ofte</p>
+    <h1>hvad er objekter</h1>
+    <h1>loop</h1>
+    <h1>funktioner</h1>
+    <p>en kommando</p>
 
-        <p>Hvad er DOM´en</p>
-            <p>Document Object Model, nok også kaldet træ struktur</p>
-            <p>En objekt model af vores dokument</p>
-            <p>Strukturen på html (og css?? ikke nævn det though)</p>
-            <p>DOM har en pyramide struktur og viser lidt hvem der er børn af hvem</p>
-            <p>Man kan se DOM strukturen i konsollen på hjemmesiden, højre klik + undersøg</p>
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////// 4. gang //////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
-        <p>hvad er variabler og hvad bruges de til</p>
-            <p>en variabel er en kasse eller skuffe der kan indeholde en værdi</p>
-            <p>Varibler bruges til at spare tid og plads. I stedet for at copy paste en hel masse informationer,
-                hvergang de skal bruges kan man bare sige "hiv fat i kassen navnet hund" variablen indeholder så en helt masse informationer om "hund" f,eks. farve, alder, hunderace.</p>
-            <p>variabler bruges til at gemme information/data om:
-                - brugeren (navn, alder, andet)
-                - Elementers placering
-                - tæller eller timer ved quiz
-                - Genbrugelighed </p>
+    <h1>Funktioner</h1>
+    <h1>Variabel scope og let</h1>
 
-        <p>Datatyper</p>
-        <p> Numbers: I JS laver den ikke forskel på ints og floats
-            Strings: Tekst og skal angives med ""
-            Booleans: Sandt eller falsk. Booleans fylder mindre end strings
-            Undefined: declared men ingen assigned værdi
-            Null: declared, men ingen værdi
-            Array: En liste af variabler, kan indeholde flere værdier
-            Objects: kan indehole variabler og funktioner.
-            bigint: Et meget højt tal
-            symbol: bruges til at lave unikke identifiers, der ikke kan overskrives eller duplikeres
-            function:
+    <h1>Bits N Bytes</h1>
+    <p>1 bit er 8 bytes</p>
+    <p>1 bit er et 0 eller 1</p>
+    <p>Med en internet hastighed på 1000/1000 mbit/s får vi </p>
+    <p>Megabit = million bit</p>
+    <p>Kilobit = 1000bit?</p>
 
-            /////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////// 3. gang //////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////// Modern JS Development ////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
-            <h1>Hvad er operatorer og hvordan kodes de</h1>
-            <p>en operator er et symbol eller function som udfører en operation</p>
-            <p>sammenlignings operatorer_ ==, ===, !=</p>
-            <p>tildelings operator: = </p>
-            <p>artimetiske operatorer: + - * /</p>
+    <h1>Template strings</h1>
+    <p>Variablen firstName kan indhegnes med ${} og det er en template string. Indenfor {}genkender den også Arithmetic
+        Operatorer </p>
+    <script>
+        function printtilkonsol(firstName) {
+            console.log(`Hello ${firstName}`);
+        }
 
-            <h1>Hvad er en kontrolstruktur og hvordan kodes en af dem (if-else)</h1>
-            <h1>hvad er et array og hvordan kodes de?</h1>
-            <p>En liste af værdier</p>
-            <p>skrives altid med []</p>
-            <p>arrays starter på position 0</p>
+        printtilkonsol("Isabella");
 
-            <h1>hvad er objekter</h1>
-            <h1>loop</h1>
-            <h1>funktioner</h1>
-            <p>en kommando</p>
-
-            /////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////// 4. gang //////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////
-
-            <h1>Funktioner</h1>
-            <h1>Variabel scope og let</h1>
-
-            <h1>Bits N Bytes</h1>
-            <p>1 bit er 8 bytes</p>
-            <p>1 bit er et 0 eller 1</p>
-            <p>Med en internet hastighed på 1000/1000 mbit/s får vi </p>
-            <p>Megabit = million bit</p>
-            <p>Kilobit = 1000bit?</p>
-
-            /////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////// Modern JS Development ////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////
-
-        <h1>Template strings</h1>
-            <p>Variablen firstName kan indhegnes med ${} og det er en template string. Indenfor {}genkender den også Arithmetic Operatorer </p>
-                <script>
-                    function printtilkonsol(firstName){
-                        console.log(`Hello ${firstName}`);
-                    }
-                    printtilkonsol("Isabella");
-
-                    function createEmail(firstName, price) {
-                        let shipping = 5.95;
-                        console.log(`Hi ${firstName}! Thanks!
+        function createEmail(firstName, price) {
+            let shipping = 5.95;
+            console.log(`Hi ${firstName}! Thanks!
                         Total: $${price}
                         Shipping: $${shipping}
                         Grand Total: $${price + shipping}`);
+        }
+
+        createEmail("Guy", 100);
+    </script>
+
+    <h1>Searching strings</h1>
+    <p>Måder at søge i strings på. Vil retunere en boolean. Case Sensitive</p>
+    <p>.startsWith("")</p>
+    <p>.endsWith("")</p>
+    <p>.includes("")</p>
+    <p>.search("")</p>
+    <p>Vil fortælle på hvilket index den første gang finder det indenfor ""</p>
+    <script>
+        const planet = "Earth";
+        console.log(planet.startsWith("Ear"));
+        //returnere true
+        console.log(planet.endsWith("Ear"));
+        //returnere false
+        console.log(planet.includes("r"));
+        //returnere true
+        console.log(planet.includes("Earth1"));
+        //returnere false
+        console.log(planet.search("art"));
+        //returnere 1, fordi "art" start første gang på index 1. Husk E er på index 0.
+    </script>
+
+    <h1>Writing maps</h1>
+    <p>Et map er et objekt som indeholder key value pairs</p>
+    <p>men i modsætning til objekter vises key-value pairs i den rækkefølge de blev tilføjet og man kan bruge hvad som
+        helst som et key</p>
+    <script>
+        //OJBECT
+        //name & age er keys, Isa & 24 er values, myObject indeholder altså 2 key-value pairs
+        let myObject = {
+            name: "Isa",
+            age: "24",
+        }
+
+        //MAP
+        let myMap = new Map();
+
+        //.set er en constructor(eller method fra map objektet), react er en key, description er en value
+        //keys can be any type
+        //vi bruger .set metoden fra map objektet til at tilføje key-value pairs
+        myMap.set("react", {description: "ui"});
+        myMap.set("jest", {description: "testing"});
+
+        console.log(myMap);
+        console.log(myMap.get("react"));
+
+        let mySecondMap = new Map([
+            [new Date(), "today"],
+            [2, {javascript: ["js", "node", "react"]}],
+            ["hej", [1, 2]]
+        ])
+
+        mySecondMap.forEach(function (item) {
+            console.log(item);
+        })
+
+        console.log(mySecondMap.size);
+    </script>
+
+    <h1>.Method objektet</h1>
+    <script>
+        //.map har en function som argument, også kaldet en callback function. Den function er en unanvgivet function som tager argumentet "number" af listen array
+        //map kører igennem listen én af gangen og smider hver eneste element ind som argument(altså istedet for number)
+        const mapMethodSyntax = array.map(function (parameter) {
+            return parameter + 2;
+        });
+
+    </script>
+
+    <h1>Date objektet</h1>
+    <p>et indbygget objekt i JS der gemmer dato og tid</p>
+    <p>uden nogen argumenter vil den give computerens dato og tid</p>
+
+    <script>
+        //Instansiere et nyt dato objekt
+        let minDato = new Date();
+
+        //Method er en funktion der er tilknyttet et objekt
+
+        console.log(minDato);
+        //Console logger: Wed Sep 27 2023 22:40:36 GMT+0200 (Centraleuropæisk sommertid)
+
+        console.log(minDato.getMonth());
+        //console logs 8 selvom vi er i September(9), fordi de sættes i et array der starter på 0..
+
+        console.log(minDato.getMonth() + 1);
+        //console logs 9
+
+        //2 siger der skal være 2 decimaler, 0 siger decimalerne skal være 0
+        let klokken = minDato.getMinutes().toString().padStart(2, 0);
+
+    </script>
+
+    <h1>Sets</h1>
+    <p>en samling af værdier af alle datatyper, men hver værdi skal være unik</p>
+    <script>
+        let books = new Set();
+        books.add("Harry Potter & de vises sten");
+        books.add("Jorden husker");
+
+        //Methods
+        console.log(books);
+        console.log(books.size);
+        console.log("Er denne bog i biblioteket?", books.has("Jorden husker"));
+        books.delete("Harry Potter & de vises sten");
+
+        books.forEach(function (item) {
+            console.log(item)
+        })
+    </script>
+
+    <h1>Promises</h1>
+    <p>lidt ligesom en error besked hehe</p>
+    <script>
+        const delay = (seconds) =>
+            new Promise(
+                (resolve, reject) => {
+                    if (typeof seconds != "number") {
+                        reject(
+                            new Error("seconds must be a number")
+                        );
                     }
-                    createEmail("Guy", 100);
-                </script>
+                    setTimeout(resolve, seconds * 1000)
+                }
+            );
 
-        <h1>Searching strings</h1>
-        <p>Måder at søge i strings på. Vil retunere en boolean. Case Sensitive</p>
-            <p>.startsWith("")</p>
-            <p>.endsWith("")</p>
-            <p>.includes("")</p>
-            <p>.search("")</p>
-                <p>Vil fortælle på hvilket index den første gang finder det indenfor ""</p>
-                <script>
-                    const planet = "Earth";
-                    console.log(planet.startsWith("Ear"));
-                    //returnere true
-                    console.log(planet.endsWith("Ear"));
-                    //returnere false
-                    console.log(planet.includes("r"));
-                    //returnere true
-                    console.log(planet.includes("Earth1"));
-                    //returnere false
-                    console.log(planet.search("art"));
-                    //returnere 1, fordi "art" start første gang på index 1. Husk E er på index 0.
-                </script>
+        console.log("Zero Seconds");
+        delay(1).then(() => console.log("one second"));
+        delay(5).then(() => console.log("five second"));
+    </script>
 
-        <h1>Writing maps</h1>
-        <p>Et map er et objekt som indeholder key value pairs</p>
-        <p>men i modsætning til objekter vises key-value pairs i den rækkefølge de blev tilføjet og man kan bruge hvad som helst som et key</p>
-        <script>
-            //OJBECT
-            //name & age er keys, Isa & 24 er values, myObject indeholder altså 2 key-value pairs
-            let myObject = {
-                name: "Isa",
-                age: "24",
-            }
+    <h1>Numbers & .math</h1>
+    <p></p>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 10) + 1
 
-            //MAP
-            let myMap = new Map();
+        let minNum = 50;
+        let maxNum = 75;
+        let number = Math.floor(Math.random() * (minNum - maxNum + 1)) + minNum;
 
-            //.set er en constructor(eller method fra map objektet), react er en key, description er en value
-            //keys can be any type
-            //vi bruger .set metoden fra map objektet til at tilføje key-value pairs
-            myMap.set("react",{description:"ui"});
-            myMap.set("jest",{description:"testing"});
+        console.log(number);
 
-            console.log(myMap);
-            console.log(myMap.get("react"));
+        console.log("-------------------Opgave 1.5--------------------")
+        //Generer et tilfældigt tal mellem 66 og 500
 
-            let mySecondMap = new Map ([
-                [new Date(), "today"],
-                [2, {javascript: ["js", "node", "react"]}],
-                ["hej", [1, 2]]
-            ])
+        //på linje 413, hvis vi ikke plusser min er fordi ellers kan vi ikke ramme 66 eller 500.
+        //min = 66 & max = 500 er default værdier, så med mindre andre argumenter er givet - går vi med default parametrene
+        let generateRandomNumber = (min = 66, max = 500) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
 
-            mySecondMap.forEach(function (item) {
-                console.log(item);
+        console.log(`Execute Order ${generateRandomNumber()}`);
+        console.log(`Execute Order ${generateRandomNumber(100, 200)}`);
+    </script>
+
+    <h1>Arrays</h1>
+    <p>Nogle metoder der kan bruges til arrays</p>
+    <p>forEach</p>
+    <p>.map</p>
+    <p>indexOf() starter på index 0 hvis søgeværden findes returneres itemets index</p>
+    <p>lastIndexOf() starter på sidste index og gør det samme som indexof</p>
+    <p>includes() returnerer true,</p>
+    <p>find()</p>
+    <p>findIndex()</p>
+
+    <script>
+        let minListe = ["Isa,Job,bog"];
+
+        console.log(`${minListe.join(", ")}`)
+
+        let formattedListUS = new Intl.ListFormat("en-US");
+        console.log(`${formattedListUS.format(minListe)}`);
+
+        //en anonym function som finder elementer der ikke inkluderer mellemrum
+        //let navn = array.find(parameter => !parameter.includes(''));
+
+        //ARRAY METODER OG DERES SYNTAKS
+
+        //slice metoden
+        //let navn = [...array.slice(0, variabel), ...array.slice(array + 1)];
+
+        //splice metoden
+        //let startIndex = array.indexOf("string");
+        //array.splice(startIndex, howManyToRemove, whatToAdd(optional));
+        //console.log(array);
+
+        //sort metoden - sorterer i alfabetisk rækkefølge
+        array.sort();
+        console.log(array);
+
+        array.sort(
+            function (a, b) { //Callback function der tager nogle parametre
+                if (a.age < b.age) {
+                    return -1;
+                } else if (a.age > b.age) {
+                    return 1;
+                } else {
+                    return 0;
+                }
             })
 
-            console.log(mySecondMap.size);
-        </script>
+    </script>
 
-        <h1>.Method objektet</h1>
-        <script>
-            //.map har en function som argument, også kaldet en callback function. Den function er en unanvgivet function som tager argumentet "number" af listen array
-            //map kører igennem listen én af gangen og smider hver eneste element ind som argument(altså istedet for number)
-            const mapMethodSyntax = array.map(function(parameter){
-                return parameter + 2;
-            });
+    <h1>Spread operator</h1>
+    <p>Med en spread operator kan man bruge indholdet af et array som et argument.</p>
+    <p>spread operatoren bruges med ... foran </p>
+    <script>
+        // const array = [1,2,3,4,5];
+        // (...array);
+    </script>
 
-        </script>
+    <h1>Promises</h1>
+    <p></p>
+    <script>
+        const spacePeople = () => {
+            return new Promise((resolves, rejects) => {
+                const api = "http://api.open-notify.org/astros.json";
+                const request = new XMLHttpRequest();
 
-        <h1>Date objektet</h1>
-        <p>et indbygget objekt i JS der gemmer dato og tid</p>
-        <p>uden nogen argumenter vil den give computerens dato og tid</p>
+                request.open("GET", api);
 
-        <script>
-            //Instansiere et nyt dato objekt
-            let minDato = new Date();
-
-            //Method er en funktion der er tilknyttet et objekt
-
-            console.log(minDato);
-            //Console logger: Wed Sep 27 2023 22:40:36 GMT+0200 (Centraleuropæisk sommertid)
-
-            console.log(minDato.getMonth());
-            //console logs 8 selvom vi er i September(9), fordi de sættes i et array der starter på 0..
-
-            console.log(minDato.getMonth() +1);
-            //console logs 9
-
-            //2 siger der skal være 2 decimaler, 0 siger decimalerne skal være 0
-            let klokken = minDato.getMinutes().toString().padStart(2,0);
-
-        </script>
-
-        <h1>Sets</h1>
-        <p>en samling af værdier af alle datatyper, men hver værdi skal være unik</p>
-        <script>
-            let books = new Set();
-            books.add("Harry Potter & de vises sten");
-            books.add("Jorden husker");
-
-            //Methods
-            console.log(books);
-            console.log(books.size);
-            console.log("Er denne bog i biblioteket?", books.has("Jorden husker"));
-            books.delete("Harry Potter & de vises sten");
-
-            books.forEach(function(item) {
-                console.log(item)
-            })
-        </script>
-
-        <h1>Promises</h1>
-        <p>lidt ligesom en error besked hehe</p>
-        <script>
-            const delay = (seconds) =>
-                new Promise (
-                    (resolve, reject) => {
-                        if(typeof seconds != "number"){
-                            reject(
-                                new Error("seconds must be a number")
-                            );
-                        }
-                    setTimeout(resolve, seconds * 1000)}
-                    );
-
-            console.log("Zero Seconds");
-            delay(1).then(() => console.log("one second"));
-            delay(5).then(() => console.log("five second"));
-        </script>
-
-        <h1>Numbers & .math</h1>
-        <p></p>
-        <script>
-            let randomNumber = Math.floor(Math.random() * 10) + 1
-
-            let minNum = 50;
-            let maxNum = 75;
-            let number = Math.floor(Math.random() * (minNum - maxNum + 1)) + minNum;
-
-            console.log(number);
-
-          console.log("-------------------Opgave 1.5--------------------")
-            //Generer et tilfældigt tal mellem 66 og 500
-
-            //på linje 413, hvis vi ikke plusser min er fordi ellers kan vi ikke ramme 66 eller 500.
-            //min = 66 & max = 500 er default værdier, så med mindre andre argumenter er givet - går vi med default parametrene
-            let generateRandomNumber = (min = 66, max = 500) => {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            };
-
-            console.log(`Execute Order ${generateRandomNumber()}`);
-            console.log(`Execute Order ${generateRandomNumber(100, 200)}`);
-        </script>
-
-        <h1>Arrays</h1>
-        <p>Nogle metoder der kan bruges til arrays</p>
-        <p>forEach</p>
-        <p>.map</p>
-        <p>indexOf() starter på index 0 hvis søgeværden findes returneres itemets index</p>
-        <p>lastIndexOf() starter på sidste index og gør det samme som indexof</p>
-        <p>includes() returnerer true,</p>
-        <p>find()</p>
-        <p>findIndex()</p>
-
-        <script>
-            let minListe = ["Isa,Job,bog"];
-
-            console.log(`${minListe.join(", ")}`)
-
-            let formattedListUS = new Intl.ListFormat("en-US");
-            console.log(`${formattedListUS.format(minListe)}`);
-
-            //en anonym function som finder elementer der ikke inkluderer mellemrum
-            let navn = array.find(parameter => !parameter.includes(''));
-
-            //ARRAY METODER OG DERES SYNTAKS
-
-            //slice metoden
-            let navn = [...array.slice(0,variabel), ...array.slice(array+1)];
-
-            //splice metoden
-            let startIndex = array.indexOf("string");
-            array.splice(startIndex, howManyToRemove, whatToAdd(optional));
-            console.log(array);
-
-            //sort metoden - sorterer i alfabetisk rækkefølge
-            array.sort();
-            console.log(array);
-
-            array.sort(
-                function(a,b){ //Callback function der tager nogle parametre
-                    if (a.age < b.age){
-                        return -1;
-                    } else if (a.age > b.age){
-                        return 1;
+                request.onload = () => {
+                    if (request.status === 200) {
+                        resolves(JSON.parse(request.response));
                     } else {
-                        return 0;
+                        rejects(Error(request.statusText))
                     }
-                })
+                };
+                    request.onerror = err => rejects(err)
+                request.send();
+            });
+        };
 
-        </script>
+        spacePeople().then((spaceData) => console.log(spaceData));
+    </script>
 
-        <h1>Spread operator</h1>
-        <p>Med en spread operator kan man bruge indholdet af et array som et argument.</p>
-        <p>spread operatoren bruges med ... foran </p>
-        <script>
-            // const array = [1,2,3,4,5];
-            // (...array);
-        </script>
-
-        <h1></h1>
-
-    </main>
+</main>
 </body>
 </html>
