@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //Opgaven wrap funktion findMultiverseNumber og returner et promise
+    //kald så den nye funktion med et tal som argument og brug then, catch og finally.
+    //Logresult og logerrror bliver overflødig
+    const wongsWords = document.getElementById(`message`);
+
+    const myNewPromise = new Promise((resolve, reject) => {
+        function findMultiverseNumber(number, successCallback, failureCallback) {
+            if (number < 0) {
+                failureCallback(new Error(`All universes in the multiverse give only integers.`));
+            } else if (number !== Math.trunc(number)) {
+                failureCallback(new Error(`All universes in the multiverse give only integers.`));
+            } else {
+                setTimeout(() => {
+                    if (number === 0 || number === 1) {
+                        successCallback(1);
+                    } else {
+                        let result = number;
+                        while (number > 1) {
+                            number -= 1;
+                            result *= number;
+                        }
+                        successCallback(result);
+                    }
+                }, 5000);
+            }
+        }
+    }).then((result) => {
+        document.getElementById(`message`).innerHTML = `The number you provided is sending you to Earth #${result}`;
+        console.log(`This is your result: ${result}`);
+    }).catch((error) => {
+        document.getElementById(`message`).innerHTML = `There was an error with your sling-ring: ${error.message} and you remain where you are.`;
+        console.log(`Error: ${error.message}`);
+    }).finally(() => {
+        console.log("done?")
+    })
+
+    // function logResult(result) {
+    //     document.getElementById(`message`).innerHTML = `The number you provided is sending you to Earth #${result}`;
+    //     console.log(`This is your result: ${result}`);
+    // }
+    //
+    // function logError(error) {
+    //     document.getElementById(`message`).innerHTML = `There was an error with your sling-ring: ${error.message} and you remain where you are.`;
+    //     console.log(`Error: ${error.message}`);
+    // }
+
+    //findMultiverseNumber(5, logResult, logError);
+    myNewPromise(5);
+
+</script>
+<main id="message">
+    Calculating...
+</main>
+</body>
+</html>

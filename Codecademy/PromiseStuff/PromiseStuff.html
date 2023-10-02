@@ -46,6 +46,8 @@
 
     //*/*/*/*/*//**//
 
+
+
     const GetUserData = new Promise((resolve, reject) => {
         const api_data = ApiRequest();
 
@@ -74,6 +76,28 @@
         hideLoading();
         showErrorMessage(error);
     });
+
+    //Promises fra timen
+    //Fetch returnerer et promsie,vi bruger den til at hente eksterne ressourcer, med f.eks. url
+    const myFirstPromise = fetch(
+        `https://media.giphy.com/media/qPCln5TSOsdRS/giphy.gif`
+    );
+    //Hvis vores promise lykkes, kører den her
+    myFirstPromise.then(function onSuccess(response){
+        console.log(`HTTP status: ${response.status}`);
+    });
+
+    //Hvis vores promise failer, kører den her
+    myFirstPromise.catch(function onError(response){
+        console.error(`Error: ${error}`);
+    });
+
+    //kører ligemeget om koden failer eller lykkes
+    myFirstPromise.finally(function onFinally(response){
+        console.error(`all done`);
+    });
+
+
 
 </script>
 </body>

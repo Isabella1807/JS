@@ -216,7 +216,7 @@ console.log("---------------------------------- Opgave 2.7 ---------------------
 // ALTSÅ den tager 2 værdier fra arraey og kigger på om sammenligninen bliver positiv eller negativ. Positiv så sættes a før b, negativ sættes b før a. mener jeg..
 
 //To optimize
-array.sort(function(a,b){
+originalStringArrayKopi.sort(function(a,b){
     if (a.age < b.age){
         return -1;
     } else if (a.age > b.age){
@@ -227,12 +227,94 @@ array.sort(function(a,b){
 });
 
 //Optimized
-array.sort(function(a,b){
+originalStringArrayKopi.sort(function(a,b){
     return a.age - b.age;
 })
 
 //Endnu mere optimized, med en anonym callback function
-array.sort((a,b) => a.age - b.age);
+originalStringArrayKopi.sort((a,b) => a.age - b.age);
 
 
+console.log("---------------------------------- Opgave 3.1 ------------------------------------------");
+//optimer denne kode:
+function parseNumbers(heroInput) {
+    let getHero = heroInput.map(function(hero) {
+        return parseInt(hero);
+    });
+    return `${getHero.join('')} Batman`;
+}
+console.log(parseNumbers(originalStringArrayKopi));
 
+
+//optimeret
+const parseNumbers2 = heroInput => {
+    let getHero = heroInput.map(hero => parseInt(hero));
+    return `${getHero.join('')} Batman`;}
+console.log(parseNumbers2(originalStringArrayKopi));
+
+//lærer optimeret
+const parseNumbers3 = heroInput => heroInput.slice(0,12).map(hero => parseInt(hero)).join('')+` Batman`;
+console.log(parseNumbers3(originalStringArrayKopi));
+
+console.log("---------------------------------- Opgave 3.2 ------------------------------------------");
+//lav et array med minimum 10 objekter, hvor hvert objekt har minimum ét array
+//output hvert objekt fra dit array på siden, svarende til billedet til højre
+//lav input felter med en knap til så du kan tilføje et nyt objekt til dit array
+
+const superhelte = [
+    {
+        name: "thor",
+        age: "1000",
+        sex: "male",
+        lawfulness: "good",
+        race: "god",
+        powers: ['superhuman strenght', 'weather manipulation'],
+    },
+    {
+        name: "iron man",
+        age: "50",
+        sex: "male",
+        lawfulness: "good",
+        race: "human",
+        powers: ['wiseness', 'technology', 'awesome sunglasses'],
+    },
+    {
+        name: "black widow",
+        age: "45",
+        sex: "female",
+        lawfulness: "good",
+        race: "human",
+        powers: ['knives','guns', 'red hair']
+    }
+];
+
+//what i tried to do
+const myFunction = (array) => {
+    for(let i = 0; i < array.length; i++){
+        console.log(`${array[i].name}`);
+    }
+}
+console.log(myFunction(superhelte));
+
+
+//What i probably should have done..
+//SHOWING MY HEROES
+const myElement = document.getElementById("helteContainer");
+
+function displaySuperheroes() {
+    for (let i = 0; i < superhelte.length; i++) {
+        const superhero = superhelte[i];
+        const superheroDiv = document.createElement("div");
+        superheroDiv.innerHTML = `<h2>${superhero.name}</h2>`;
+        for (const key in superhero) {
+            if (superhero.hasOwnProperty(key) && key !== "name") {
+                superheroDiv.innerHTML += `<p><strong>${key}:</strong> ${superhero[key]}</p>`;
+            }
+        }
+        myElement.appendChild(superheroDiv);
+    }
+}
+
+displaySuperheroes();
+
+//ADDING NEW HEROES
