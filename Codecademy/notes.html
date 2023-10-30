@@ -12,44 +12,64 @@
 <body>
 <main>
     <h1>JavaScript Notes</h1>
+
     <h2>Data Types</h2>
-    <ul>
-        <li>Number <br>
-            Any number, including numbers with decimals: 4, 8, 1516, 23.42.
-        </li>
-        <li>String <br>
-            Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by
+    <p>There are 8 datatypes in JavaScript</p>
+    <ol>
+        <h3>
+            <li>Number</li>
+        </h3>
+        <p>Any number, including numbers with decimals: 4, 8, 1516, 23.42. </p>
+        <P>JavaScript does not differentiate between floats and integers</p>
+        <br>
+
+        <h3>
+            <li>String</li>
+        </h3>
+        <p>Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by
             single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to think
-            of string as a fancy word for text.
-            <ul>
-                <p> Example of a String concatenation.
-                    let a = 'Hello' + ' ' + 'world';<br>
-                    console.log(a);<br>
-                    logs "Hello world" in the console
-                </p>
-            </ul>
-        </li>
-        <li>Boolean <br>
-            This data type only has two possible values— either true or false (without quotes). It’s helpful to
-            think of booleans as on and off switches or as the answers to a “yes” or “no” question.
-        </li>
-        <li>Null <br>
-            This data type represents the intentional absence of a value, and is represented by the keyword null
-            (without quotes).
-        </li>
-        <li>Undefined <br>
-            This data type is denoted by the keyword undefined (without quotes). It also represents the
+            of string as a fancy word for text.</p>
+        <br>
+
+        <h3>
+            <li>Boolean</li>
+        </h3>
+        <p>This data type only has two possible values— either true or false (without quotes). It’s helpful to
+            think of booleans as on and off switches or as the answers to a “yes” or “no” question.</p>
+        <br>
+
+        <h3>
+            <li>Null</li>
+        </h3>
+        <p>This data type represents the intentional absence of a value, and is represented by the keyword null.</p>
+        <br>
+
+
+        <h3>
+            <li>Undefined</li>
+        </h3>
+        <p>This data type is denoted by the keyword undefined (without quotes). It also represents the
             absence of a value though it has a different use than null. undefined means that a given value does not
-            exist.
-        </li>
-        <li>Symbol <br>
-            A newer feature to the language, symbols are unique identifiers, useful in more complex coding. No
-            need to worry about these for now.
-        </li>
-        <li>Object <br>
-            Collections of related data.
-        </li>
-    </ul>
+            exist.</p>
+        <br>
+
+        <h3>
+            <li>Symbol</li>
+        </h3>
+        <p>A newer feature to the language, symbols are unique identifiers, useful in more complex coding. </p>
+        <br>
+
+        <h3>
+            <li>Object</li>
+        </h3>
+        <p>Collections of related data.</p>
+        <br>
+
+        <h3>
+            <li>BigInt</li>
+        </h3>
+        <p>Numbers between 9007199254740991 +(2^53-1) & -9007199254740991 +(2^53-1) and be safely stored. But numbers outside of this range needs to be declared as a bigint, otherwise they will be rounded and lose precision.</p>
+    </ol>
 
     <h2>Operators</h2>
     <h3>Aritmetic operators</h3>
@@ -217,7 +237,8 @@
     </p>
 
     <h2>Properties and Methods</h2>
-    <p>Properties(egenskaber) are named values associated with an Object. fx. An object called "person" would probably have the properties "name", "age" and "gender"</p>
+    <p>Properties(egenskaber) are named values associated with an Object. fx. An object called "person" would probably
+        have the properties "name", "age" and "gender"</p>
     <p>Methods is a function that is a property of an object.</p>
     <h3>String properties</h3>
     <ul>
@@ -327,7 +348,9 @@
         <li>if</li>
         <li>else</li>
         <li>else if <br>
-            Else if allows for more than two outcomes. You can add as many else if statements as you want. The else if statement comes after the if statement and before the else statement.</li>
+            Else if allows for more than two outcomes. You can add as many else if statements as you want. The else if
+            statement comes after the if statement and before the else statement.
+        </li>
     </ul>
     <h3>The Switch keyword</h3>
     <p>Else if statements can become quite long and overwhelming, which is when we can use the switch keyword</p>
@@ -336,11 +359,11 @@
         let athleteFinalPosition = 'first place'; <br>
         <br>
         if (athleteFinalPosition === 'first place') { <br>
-            console.log('You get the gold medal!'); <br>
+        console.log('You get the gold medal!'); <br>
         } else if (athleteFinalPosition === 'second place') { <br>
-            console.log('You get the silver medal!'); <br>
+        console.log('You get the silver medal!'); <br>
         } else if (athleteFinalPosition === 'third place') { <br>
-            console.log ('You get the bronze medal!'); <br>
+        console.log ('You get the bronze medal!'); <br>
         } else { <br>
         console.log('No medal awarded.'); <br>
         }
@@ -404,15 +427,15 @@
         <li></li>
     </ul>
     <script>
-        function plantNeedsWater1 (day){                         //First iteration of a function declartion
-            if (day === 'Wednesday'){
+        function plantNeedsWater1(day) {                         //First iteration of a function declartion
+            if (day === 'Wednesday') {
                 return true;
             } else {
                 return false;
             }
         }
 
-        const plantNeedsWater2 = function (day){                 //Second iteration of a function declartion using function expression
+        const plantNeedsWater2 = function (day) {                 //Second iteration of a function declartion using function expression
             return day === 'Wednesday';
         }
 
@@ -448,22 +471,31 @@
     <p>Concise body syntax (with one parameter) does not use parentheses, curly braces, or the return keyword.</p>
 
     <h3>Scope</h3>
-    <p>refers to where variables can be accessed throughout the program, and is determined by where and how they are declared.</p>
+    <p>refers to where variables can be accessed throughout the program, and is determined by where and how they are
+        declared.</p>
     <ul>
         <li>Global variables <br>
-            Global variables are declared outside of blocks{} but can be used inside of functions, and is stored in the global namespace.<br>
-            The Global namespace can reach a point where there is too many variables, which is called Scope Pollution. Scope pollution makes it difficult to keep track of variables, and variables might collide with locally scoped.
+            Global variables are declared outside of blocks{} but can be used inside of functions, and is stored in the
+            global namespace.<br>
+            The Global namespace can reach a point where there is too many variables, which is called Scope Pollution.
+            Scope pollution makes it difficult to keep track of variables, and variables might collide with locally
+            scoped.
         </li>
         <li>Local variables <br>
-            Local variables are defined inside blocks of code {} and we refer to those as being or having block scope. cannot be used outside of a function.
+            Local variables are defined inside blocks of code {} and we refer to those as being or having block scope.
+            cannot be used outside of a function.
         </li>
     </ul>
 
     <h1>JavaScript loading</h1>
     <p>Defer vs async?</p>
-    <p>Adding the defer attribute to a script result in that script running after the HTML document has been parsed, useful if the script depends on the html or other scripts</p>
-    <p>or: The defer attribute of a tag is a boolean attribute used to indicate that the script can be loaded but not executed until after the HTML document is fully parsed.</p>
-    <p>Scripts are loaded synchronously as they appear in an HTML file, before the following HTML is loaded and parsed. The async attribute can be used to load the scripts asynchronously, such that they will load in the background without blocking the HTML parser from continuing.</p>
+    <p>Adding the defer attribute to a script result in that script running after the HTML document has been parsed,
+        useful if the script depends on the html or other scripts</p>
+    <p>or: The defer attribute of a tag is a boolean attribute used to indicate that the script can be loaded but not
+        executed until after the HTML document is fully parsed.</p>
+    <p>Scripts are loaded synchronously as they appear in an HTML file, before the following HTML is loaded and parsed.
+        The async attribute can be used to load the scripts asynchronously, such that they will load in the background
+        without blocking the HTML parser from continuing.</p>
 
     <h1>The Document Object Model (DOM)</h1>
     <p>The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.</p>
@@ -473,7 +505,8 @@
     <h1>Select and Modify Elements</h1>
     <ul>
         <li>.querySelector() <br>
-            <p>The .querySelector() method allows us to specify a CSS selector as a string and returns the first element that matches that selector.</p>
+            <p>The .querySelector() method allows us to specify a CSS selector as a string and returns the first element
+                that matches that selector.</p>
         </li>
         <li>.getElementById() <br>
             <p>To access an element directly by its id, you can use the aptly named .getElementById() method</p>
@@ -486,17 +519,21 @@
         </li>
     </ul>
     <br>
-    <p>The main difference between querySelector() and getElementsByTagName() is that querySelector() returns the first matching element it finds, while getElementsByClassName() returns a collection of elements (an HTMLCollection) that match the specified class name.</p>
-    <p>So, if you want to select the first element that matches a specific class name, you should use querySelector().</p>
-    <p>On the other hand, if you want to select all elements that match a specific class name, you should use getElementsByClassName().</p>
+    <p>The main difference between querySelector() and getElementsByTagName() is that querySelector() returns the first
+        matching element it finds, while getElementsByClassName() returns a collection of elements (an HTMLCollection)
+        that match the specified class name.</p>
+    <p>So, if you want to select the first element that matches a specific class name, you should use
+        querySelector().</p>
+    <p>On the other hand, if you want to select all elements that match a specific class name, you should use
+        getElementsByClassName().</p>
 
     <h1>Appending, removing and creating elements</h1>
     <p>You can create, append, and remove elements by using the methods: </p>
-        <ul>
-            <li>.createElement() creates an element in memory</li>
-            <li>.appendChild() adds a child to an existing parent element in the DOM</li>
-            <li>.removeChild() removes a child from an existing parent element in the DOM</li>
-        </ul>
+    <ul>
+        <li>.createElement() creates an element in memory</li>
+        <li>.appendChild() adds a child to an existing parent element in the DOM</li>
+        <li>.removeChild() removes a child from an existing parent element in the DOM</li>
+    </ul>
 
 </main>
 </body>
@@ -509,10 +546,11 @@
         font-size: 50px;
     }
 
-    h2{
+    h2 {
         font-size: 40px;
     }
-    h3{
+
+    h3 {
         font-size: 30px;
         font-style: italic;
     }
